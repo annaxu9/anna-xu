@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '30': '30vh',
+      },
       colors: {
         color1: "#C4EAC3", // fringyflower
         color2: "#63A083", // patina
