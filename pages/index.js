@@ -1,9 +1,9 @@
+import Background from "../components/Background/Background"
+
 export default function Home() {
   return (
-    <div>
-      <h1>
-        Hello Anna
-      </h1>
-    </div>
+    <>
+      <Background />
+    </>
   )
 }
