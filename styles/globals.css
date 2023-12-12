@@ -14,17 +14,10 @@ a {
 }
 
 .wave-background {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath fill='%23091647' d='M0,30 C60,90 50,120 60,150 C150,200 90,110 250,150 C250,180 250,120 300,150 C350,180 350,120 200,150 C450,180 450,120 500,150 C550,180 550,120 600,150 C650,150 950,120 700,150 C50,350 0,120 330,450 C50,180 850,160 00,150 C950,10 550,120 6000, 710 L900,300 L0,100 Z' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath fill='%23091647' d='M0,30 C60,90 50,120 60,150 C150,200 90,110 250,150 C550,100 250,120 300,150 C350,180 350,120 200,150 C450,180 450,120 500,150 C550,180 550,120 600,150 C650,150 950,120 700,150 C50,350 0,120 330,450 C50,180 850,160 00,150 C950,10 550,120 6000, 710 L900,300 L0,100 Z' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-
-.wave2-background {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath fill='%23C7C8FF' d='M0,150 C100,250 200,50 300,150 C400,250 500,50 600,150 C700,250 800,50 900,150 C1000,250 1100,50 1200,150 V300 H0 Z' /%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .css-rainbow-text {
@@ -32,6 +25,17 @@ a {
   color: #0000;
   border-style: solid;
   border-color: #9DA0FF;
+  border-width: 2px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+}
+
+.no-rainbow-text {
+  background: black;
+  color: #0000;
+  border-style: solid;
+  border-color: black;
   border-width: 2px;
   -webkit-background-clip: text;
   background-clip: text;
