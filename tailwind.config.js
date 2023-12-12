@@ -6,14 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      spacing: {
-        '30': '30vh',
+      fontFamily: {
+        sans: ['DM Sans', 'sans-serif']
       },
       colors: {
-        color1: "#C4EAC3", // fringyflower
-        color2: "#63A083", // patina
-        color3: "#FFCDCD", // cosmos
-        color4: "#FFF9C1", // egg white
+        melrose: "#9DA0FF",
+        downriver: "#091647",
       }
     },
   },

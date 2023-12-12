@@ -1,11 +1,10 @@
-import Background from "../components/Background/Background"
-import Name from "../components/Name/Name"
-import Link from "next/link"
+
+import Screen from "../components/Screen/Screen";
 
 export default function Home() {
   return (
-    <>
-      <Background />
-    </>
+    <div className="wave-background d">
+      <Screen />
+    </div>
   )
 }
