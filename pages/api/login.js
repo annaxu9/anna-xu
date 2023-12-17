@@ -1,4 +1,6 @@
 import { serialize } from 'cookie';
+import crypto from 'crypto';
+
 
 export default function handler(req, res) {
   const state = generateRandomString(16);
@@ -16,4 +18,8 @@ export default function handler(req, res) {
 
 function generateRandomString(length) {
   // Generate a random string for state parameter
+  return crypto
+  .randomBytes(60)
+  .toString('hex')
+  .slice(0, length);
 }
