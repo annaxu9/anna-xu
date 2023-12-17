@@ -93,16 +93,23 @@ export default function Colorfy() {
       <div className="p-5 text-center animated_rainbow_1">colorfy</div>
       {!isAuthenticated && <button onClick={handleLogin}>Login with Spotify</button>}
       {isAuthenticated && (
-        <div> 
+        <div className="relative flex flex-col justify-center items-center">
           <SpotifySearch searchTerm={searchTerm} onSearchChange={setSearchTerm} onSearchSubmit={handleSearch}/>
-          <div id="results">
+
+          <div id="results" className="absolute top-full w-4/5 mt-1 bg-white  border-white-300 rounded-md shadow-lg max-h-60 overflow-y-auto z-10">
             {results.map(track => (
-              <p key={track.id} onClick={() => handleSongClick(track.id)}>
+              <p 
+                key={track.id} 
+                onClick={() => handleSongClick(track.id)}
+                className="p-2 hover:bg-gray-100 cursor-pointer"
+              >
                 {track.name} by {track.artist}
               </p>
             ))}
           </div>
         </div>
+
+
       )}
     </AuthProvider>
   );

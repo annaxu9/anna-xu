@@ -116,49 +116,52 @@ const SongDetails = () => {
             { key: "B Major", hsl: 300 }    // Magenta
         ];
         return keys[key].hsl
-
     }
 
     return (
-        <div>
-            <h1>Song Details Page</h1>
-            <p>Song ID: {songId}</p>
-            <button onClick={handleBackButtonClick}>Go Back</button> {/* Back Button */}
+        <div className='flex justify-center items-center min-h-screen'>
+            <div className="w-4/5 max-w-screen-lg min-h-screen p-6">
+                <h1 className="text-4xl font-bold text-center text-blue-600 mb-6">{trackDetails?.name}</h1>
+                <button 
+                    onClick={handleBackButtonClick} 
+                    className="mb-6 py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded shadow"
+                >
+                    Go Back
+                </button>
 
-            {trackDetails && (
-                <div id="trackDetails">
-                    <h3>{trackDetails.name}</h3>
-                    <div className='flex flex-row'>
-                        <ColorSquare hue={getHue(audioFeatures.valence)} saturation={getSaturation(audioFeatures.danceability)} lightness={getLightness(audioFeatures.energy)} />
-                        <ColorSquare hue={getHueTempo(audioFeatures.tempo)} saturation={getSaturation(audioFeatures.danceability)} lightness={getLightness(audioFeatures.energy)} />
-                        <ColorSquare hue={getHueKey(audioFeatures.key)} saturation={70} lightness={50} />
+                {trackDetails && (
+                    <div id="trackDetails" className="bg-white p-4 rounded-lg shadow-md">
+                        <h3 className="text-2xl font-semibold mb-2">{trackDetails.name}</h3>
+                        <div className='flex flex-row space-x-2 mb-4'>
+                            {/* Assuming ColorSquare is a component */}
+                            <ColorSquare hue={getHue(audioFeatures.valence)} saturation={getSaturation(audioFeatures.danceability)} lightness={getLightness(audioFeatures.energy)} />
+                            <ColorSquare hue={getHueTempo(audioFeatures.tempo)} saturation={getSaturation(audioFeatures.danceability)} lightness={getLightness(audioFeatures.energy)} />
+                            <ColorSquare hue={getHueKey(audioFeatures.key)} saturation={70} lightness={50} />
+                        </div>
+                        <p>Artist: {trackDetails.artists.map(artist => artist.name).join(', ')}</p>
+                        <p>Album: {trackDetails.album.name}</p>
+                        <p>Release Date: {trackDetails.album.release_date}</p>
+                        <p>Popularity: {trackDetails.popularity}</p>
+                        <p>Acousticness: {audioFeatures.acousticness}</p>
+                        <p>Danceability: {audioFeatures.danceability}</p>
+                        <p>Energy: {audioFeatures.energy}</p>
+                        <p>Instrumentalness: {audioFeatures.instrumentalness}</p>
+                        <p>Key: {audioFeatures.key}</p>
+                        <p>Loudness: {audioFeatures.loudness} dB</p>
+                        <p>Speechiness: {audioFeatures.speechiness}</p>
+                        <p>Valence: {audioFeatures.valence}</p>
+                        <p>Tempo: {audioFeatures.tempo} BPM</p>
                     </div>
-                    <p>Artist: {trackDetails.artists.map(artist => artist.name).join(', ')}</p>
-                    <p>Album: {trackDetails.album.name}</p>
-                    <p>Release Date: {trackDetails.album.release_date}</p>
-                    {/* <img src="${trackDetails.album.images[0].url}" alt="Album Cover" width="200"> */}
-                    <p>Popularity: {trackDetails.popularity}</p>
-                    <p>Acousticness: {audioFeatures.acousticness}</p>
-                    <p>Danceability: {audioFeatures.danceability}</p>
-                    <p>Energy: {audioFeatures.energy}</p>
-                    <p>Instrumentalness: {audioFeatures.instrumentalness}</p>
-                    <p>Key: {audioFeatures.key}</p>
-                    <p>Loudness: {audioFeatures.loudness} dB</p>
-                    <p>Speechiness: {audioFeatures.speechiness}</p>
-                    <p>Valence: {audioFeatures.valence}</p>
-                    <p>Tempo: {audioFeatures.tempo} BPM</p>
-                </div>
-            )}
+                )}
 
-            {artistsGenres && (
-                <div>
-                    {Array.from(artistsGenres).map((genre, index) => (
-                        <p key={index}>{genre}</p>
-                    ))}
-                </div>
-            )}
-
-
+                {artistsGenres && (
+                    <div className="mt-6">
+                        {Array.from(artistsGenres).map((genre, index) => (
+                            <p key={index} className="bg-blue-200 p-2 rounded my-1">{genre}</p>
+                        ))}
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
