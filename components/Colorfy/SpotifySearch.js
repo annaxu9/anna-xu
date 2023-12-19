@@ -7,9 +7,14 @@ export default function SpotifySearch({ searchTerm, onSearchChange, onSearchSubm
         type="text" 
         value={searchTerm} 
         onChange={(e) => onSearchChange(e.target.value)}
-        placeholder="Search for a song or artist..."
+        placeholder="Search for a song or an artist..."
         className="flex flex-grow p-2 rounded-l-lg border border-r-0 focus:outline-none"
-        style={{ minWidth: '0', backgroundColor: '#blue-500', color: 'black'}}  // Adjusted styles for longer search bar with blue background
+        style={{ minWidth: '0', backgroundColor: '#blue-500', color: 'black'}}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            onSearchSubmit();
+          }
+        }}
       />
       <button 
         onClick={onSearchSubmit}
