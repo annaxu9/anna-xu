@@ -13,29 +13,33 @@ a {
   box-sizing: border-box;
 }
 
+.wave-backgroundg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='gradient' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:blue;' /%3E%3Cstop offset='100%25' style='stop-color:red;' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23gradient)' d='M0,30 C60,90 50,120 60,150 C150,200 90,110 250,150 C550,100 250,120 300,150 C350,180 350,120 200,150 C450,180 450,120 500,150 C550,180 550,120 600,150 C650,150 950,120 700,150 C50,350 0,120 330,450 C50,180 850,160 00,150 C950,10 550,120 6000, 710 L900,300 L0,100 Z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
 .wave-background {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath fill='%23091647' d='M0,30 C60,90 50,120 60,150 C150,200 90,110 250,150 C550,100 250,120 300,150 C350,180 350,120 200,150 C450,180 450,120 500,150 C550,180 550,120 600,150 C650,150 950,120 700,150 C50,350 0,120 330,450 C50,180 850,160 00,150 C950,10 550,120 6000, 710 L900,300 L0,100 Z' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath fill='%233E3E3E' d='M0,30 C60,90 50,120 60,150 C150,200 90,110 250,150 C550,100 250,120 300,150 C350,180 350,120 200,150 C450,180 450,120 500,150 C550,180 550,120 600,150 C650,150 950,120 700,150 C50,350 0,120 330,450 C50,180 850,160 00,150 C950,10 550,120 6000, 710 L900,300 L0,100 Z' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .css-rainbow-text {
-  background: linear-gradient(90deg, #f00, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #af0, #5f0, #2bff00, #00ff2b, #00ff80, #00ffd5, #0ff, #00d4ff, #0af, #007fff, #05f, #002bff, #00f, #2a00ff, #50f, #7f00ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+  background: linear-gradient(90deg, #f00, #ff2b00, #f50, #ff8000, #fa0, #fa0, #00d4ff, #0af, #007fff, #05f, #002bff, #00f, #2a00ff, #50f, #7f00ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
   color: #0000;
-  border-style: solid;
-  border-color: #9DA0FF;
-  border-width: 2px;
   -webkit-background-clip: text;
   background-clip: text;
-  display: inline-block;
 }
 
 .no-rainbow-text {
   background: black;
   color: #0000;
   border-style: solid;
-  border-color: black;
+  border-color: white;
   border-width: 2px;
   -webkit-background-clip: text;
   background-clip: text;
