@@ -16,6 +16,7 @@ module.exports = {
         pinknew: "#F8D4FB",
         orangenew: "#E17344",
         melrose: "#9DA0FF",
+        melrose100: "#C7C8FF",
         downriver: "#091647",
       },
     },
