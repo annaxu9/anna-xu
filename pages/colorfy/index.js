@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SpotifySearch from "../../components/Colorfy/SpotifySearch";
 import { AuthProvider } from '../../contexts/AuthContext'
 import { useAuth } from "../../contexts/AuthContext";
@@ -11,6 +11,9 @@ export default function Colorfy() {
   const [results, setResults] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(!!token); // Determine authentication based on token
   const [newToken, setNewToken] = useState('')
+  const [isSearchFocused, setIsSearchFocused] = useState(true);
+
+  const searchBarRef = useRef(null);
 
   const handleLogin = () => {
     window.location.href = '/api/login';
@@ -77,7 +80,13 @@ export default function Colorfy() {
       alert("Please enter a search term.");
       return;
     }
+    // unfocusSearchBar();
     await searchSpotify(searchTerm);
+    setIsSearchFocused(false)
+  };
+
+  const unfocusSearchBar = () => {
+    searchBarRef.current?.blur();
   };
 
   return (
@@ -87,8 +96,8 @@ export default function Colorfy() {
       {!isAuthenticated && <div className="flex justify-center"><button className="mt-10 px-6 py-2 bg-melrose text-white rounded hover:bg-blue-700 transition-colors duration-200 ease-in-out shadow-lg" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }} onClick={handleLogin}>Login with Spotify</button></div>}
       {isAuthenticated && (
         <div className="relative flex flex-col justify-center items-center">
-          <SpotifySearch searchTerm={searchTerm} onSearchChange={setSearchTerm} onSearchSubmit={handleSearch}/>
-          <SearchResults results={results} />
+          <SpotifySearch ref={searchBarRef} searchTerm={searchTerm} onSearchChange={setSearchTerm} onSearchSubmit={handleSearch} setIsSearchFocused={setIsSearchFocused}/>
+          <SearchResults results={results} isSearchFocused={isSearchFocused}/>
         </div>
 
       )}
