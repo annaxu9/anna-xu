@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
 import SpotifySearch from "../../components/Colorfy/SpotifySearch";
 import { AuthProvider } from '../../contexts/AuthContext'
 import { useAuth } from "../../contexts/AuthContext";
-import SearchResults from "../../components/Colorfy/SearchResults";
 
 export default function Colorfy() {
   const { token, setToken } = useAuth(); // Using useAuth hook
+  const router = useRouter();
 
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
@@ -21,6 +22,7 @@ export default function Colorfy() {
     const accessToken = urlParams.get('access_token');
 
     if (accessToken) {
+      console.log('New access token?' + accessToken)
       setToken(accessToken);
       setNewToken(accessToken);
       setIsAuthenticated(true);
@@ -38,6 +40,7 @@ export default function Colorfy() {
       updatedToken = newToken
     } 
     setToken(updatedToken);
+    console.log(updatedToken)
 
     try {
       const params = new URLSearchParams({ q: query, type: 'track' });
@@ -80,6 +83,10 @@ export default function Colorfy() {
     await searchSpotify(searchTerm);
   };
 
+  const handleSongClick = (trackId) => {
+    router.push(`/colorfy/${trackId}`);
+  };
+
   return (
 
     <AuthProvider>
@@ -88,7 +95,18 @@ export default function Colorfy() {
       {isAuthenticated && (
         <div className="relative flex flex-col justify-center items-center">
           <SpotifySearch searchTerm={searchTerm} onSearchChange={setSearchTerm} onSearchSubmit={handleSearch}/>
-          <SearchResults results={results} />
+
+          <div id="results" className="absolute top-full w-4/5 mt-1 bg-white  border-white-300 rounded-md shadow-lg max-h-60 overflow-y-auto z-10">
+            {results.map(track => (
+              <p 
+                key={track.id} 
+                onClick={() => handleSongClick(track.id)}
+                className="p-2 hover:bg-gray-100 cursor-pointer"
+              >
+                {track.name} by {track.artist}
+              </p>
+            ))}
+          </div>
         </div>
 
       )}

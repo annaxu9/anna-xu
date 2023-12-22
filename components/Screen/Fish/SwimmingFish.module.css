@@ -1,7 +1,7 @@
 /* SwimmingFish.module.css */
 @keyframes swimRight {
     0% { 
-      transform: translateX(-300px); /* Start off-screen left */
+      transform: translateX(-250px); /* Start off-screen left */
       opacity: 0;
     }
     5%, 95% {
@@ -22,7 +22,7 @@
       opacity: 1;
     }
     100% { 
-      transform: translateX(-300px); /* Move off-screen left */
+      transform: translateX(-250px); /* Move off-screen left */
       opacity: 0;
     }
   }

@@ -1,6 +1,7 @@
 export default function About() {
     return(
-        <div>
+        <div className="flex justify-center align-center">
+            More Coming Soon!
         </div>
     )
 }

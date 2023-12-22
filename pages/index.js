@@ -1,8 +1,5 @@
-
-import HoverItem from "../components/Screen/HoverItem"
-import Image from "next/image"
 import MyGrid from "../components/Screen/MyGrid"
-import SwimmingFish from "../components/Fish/SwimmingFish"
+import SwimmingFish from "../components/Screen/Fish/SwimmingFish"
 
 export default function Home() {
   return (

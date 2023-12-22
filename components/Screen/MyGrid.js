@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Star from '../Shapes/Star';
+import Star from './Shapes/Star';
 
 const gridImages = [
     "/home-images/cr1.png", "/home-images/cr2.png", "/home-images/cr3.png",
