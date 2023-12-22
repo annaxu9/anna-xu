@@ -30,7 +30,7 @@ a {
 .image {
   width: 100px;
   height: 100px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .grid-container {
@@ -39,6 +39,43 @@ a {
   grid-gap: 10px; /* Adjust the gap between grid items */
   justify-content: center; /* Center the grid horizontally */
   align-items: center; /* Center the grid items vertically */
+}
+
+@keyframes dropAndDisappear {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px); /* Adjust as needed */
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dropping {
+  animation: dropAndDisappear 1s ease forwards;
+}
+
+.fading-in {
+  animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.fade-in-out {
+  animation: fadeInOut 6s ease forwards;
 }
 
 .animated_rainbow_1 {

@@ -1,0 +1,91 @@
+/* SwimmingFish.module.css */
+@keyframes swimRight {
+    0% { 
+      transform: translateX(-300px); /* Start off-screen left */
+      opacity: 0;
+    }
+    5%, 95% {
+      opacity: 1;
+    }
+    100% { 
+      transform: translateX(105vw); /* Move off-screen right */
+      opacity: 0;
+    }
+  }
+  
+  @keyframes swimLeft {
+    0% { 
+      transform: translateX(105vw); /* Start off-screen right */
+      opacity: 0;
+    }
+    5%, 95% {
+      opacity: 1;
+    }
+    100% { 
+      transform: translateX(-300px); /* Move off-screen left */
+      opacity: 0;
+    }
+  }
+  
+  .fishContainerRight {
+    animation: swimRight 15s ease-in-out;
+  }
+  
+  .fishContainerLeft {
+    animation: swimLeft 15s ease-in-out;
+  }
+    
+    .speechBubble {
+      position: absolute;
+      bottom: 60px; /* Adjust as needed to position above the fish */
+      left: -10px; /* Center the bubble */
+      width: 150px; /* Width of the bubble */
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 20px;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    
+      /* Optional: add a drop shadow for a 3D effect */
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Existing styles... */
+  
+  .smallBubbleOneLeft, .smallBubbleTwoLeft, .smallBubbleOneRight, .smallBubbleTwoRight {
+      position: absolute;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 50%;
+    }
+    
+    .smallBubbleOneLeft {
+      width: 15px;
+      height: 15px;
+      bottom: 40px; /* Adjust as needed */
+      left: 115px; /* Adjust as needed */
+    }
+    
+    .smallBubbleTwoLeft {
+      width: 10px;
+      height: 10px;
+      bottom: 30px; /* Adjust as needed */
+      left: 100px; /* Adjust as needed */
+    }
+    
+    .smallBubbleOneRight {
+      width: 15px;
+      height: 15px;
+      bottom: 40px; /* Adjust as needed */
+      left: -5px; /* Adjust as needed */
+    }
+    
+    .smallBubbleTwoRight {
+      width: 10px;
+      height: 10px;
+      bottom: 30px; /* Adjust as needed */
+      left: -10px; /* Adjust as needed */
+    }
+  
+  

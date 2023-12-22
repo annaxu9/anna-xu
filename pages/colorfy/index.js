@@ -91,7 +91,7 @@ export default function Colorfy() {
 
     <AuthProvider>
       <div className="p-5 text-center animated_rainbow_1">colorfy</div>
-      {!isAuthenticated && <button onClick={handleLogin}>Login with Spotify</button>}
+      {!isAuthenticated && <button className="px-6 py-2 bg-melrose text-white rounded hover:bg-blue-700 transition-colors duration-200 ease-in-out shadow-lg" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }} onClick={handleLogin}>Login with Spotify</button>}
       {isAuthenticated && (
         <div className="relative flex flex-col justify-center items-center">
           <SpotifySearch searchTerm={searchTerm} onSearchChange={setSearchTerm} onSearchSubmit={handleSearch}/>

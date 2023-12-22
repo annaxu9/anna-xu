@@ -2,6 +2,7 @@
 import HoverItem from "../components/Screen/HoverItem"
 import Image from "next/image"
 import MyGrid from "../components/Screen/MyGrid"
+import SwimmingFish from "../components/Fish/SwimmingFish"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <div className="flex justify-center items-start w-full h-full pt-5">
         <div className="w-4/5">
           <MyGrid />
+          <SwimmingFish />
         </div>
       </div>
     </div>
