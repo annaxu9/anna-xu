@@ -1,13 +1,13 @@
 import React from 'react';
 
-const ColorSquare = ({ hue, saturation, lightness }) => {
+const ColorSquare = ({ color }) => {
   const style = {
     width: '100px',
     height: '100px',
-    backgroundColor: `hsl(${hue}, ${saturation}%, ${lightness}%)`
+    backgroundColor: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
   };
 
-  return <div style={style} />;
+  return <div className='m-3' style={style} />;
 }
 
 export default ColorSquare;

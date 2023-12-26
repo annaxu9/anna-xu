@@ -28,7 +28,7 @@ export default function Stats({acousticness, danceability, energy, tempo, valenc
     return (
         <div className="bg-melrose100 p-2 rounded-lg">
             <h1 className="text-center font-black">Stats</h1>
-            <div className="flex justify-around flex-col md:flex-row">
+            <div className="flex justify-around flex-col sm:flex-row">
                 <div className="flex-grow w-1/2 p-2">
                     <div>
                         <StatHover 
@@ -62,9 +62,9 @@ export default function Stats({acousticness, danceability, energy, tempo, valenc
                             title="Speechiness"
                             hovertext="This measure of how much spoken words are present. 
                             A song that blends music with spoken elements, such as rap, will have a higher speechiness score compared to a completely instrumental piece.
-                            Since podcasts are included in this score, numbers will mostly range from 0 - 0.35"
+                            Since podcasts are included in this score, numbers will mostly range from 0 - 0.4"
                         />
-                        <ProgressBar start={0} end={0.35} target={speechiness}/>
+                        <ProgressBar start={0} end={0.4} target={speechiness}/>
                     </div>
                     <div>
                         <StatHover 

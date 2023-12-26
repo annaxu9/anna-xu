@@ -33,7 +33,8 @@ export default function Colorfy() {
   }, []);
 
   useEffect(() => {
-    // Because of the asyncronous nature of React I need this to actually update the token context. 
+    // Because of the asyncronous nature of React I need this to actually update the token context.
+    console.log("This is the token in local storage ", localStorage.getItem('spotifyAccessToken')) 
   }, [token]); 
   
 

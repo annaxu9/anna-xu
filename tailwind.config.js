@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'md': '500px',
+        'sm': '500px',
+        'md': '650px',
       },
       fontFamily: {
         sans: ['DM Sans', 'sans-serif'],

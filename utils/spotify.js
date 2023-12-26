@@ -34,6 +34,7 @@ const searchSpotify = async(query, token) => {
 
 const fetchTrackDetails = async (songId, token) => {
     // Fetching track details
+    console.log("The token in fetchTrack ", token)
     const trackResponse = await fetch(`https://api.spotify.com/v1/tracks/${songId}`, {
         method: 'GET',
         headers: { 'Authorization': `Bearer ${token}` }
@@ -44,6 +45,7 @@ const fetchTrackDetails = async (songId, token) => {
 
 const fetchAudioFeatures = async (songId, token) => {
     // Fetching audio features
+    console.log("The token in fetchAudio ", token)
     const featuresResponse = await fetch(`https://api.spotify.com/v1/audio-features/${songId}`, {
         method: 'GET',
         headers: { 'Authorization': `Bearer ${token}` }

@@ -6,6 +6,7 @@ import TitleName from '../../components/Colorfy/TitleName';
 import AlbumArtists from '../../components/Colorfy/AlbumArtists';
 import MainStats from '../../components/Colorfy/MainStats';
 import Genres from '../../components/Colorfy/Genres';
+import Vibes from '../../components/Colorfy/Vibes';
 import Stats from '../../components/Colorfy/Stats';
 
 const SongDetails = () => {
@@ -23,7 +24,7 @@ const SongDetails = () => {
         } else {
             setLoading(true)
         }
-    }, [trackDetails, audioFeatures, artistsDetails])
+    }, [trackDetails, audioFeatures, artistsDetails, token])
 
     return (
         <div className='flex justify-center'>
@@ -46,6 +47,14 @@ const SongDetails = () => {
                             popularity={trackDetails.popularity}
                         />
                         <Genres artists={artistsDetails}/>
+                        <Vibes 
+                            acousticness={audioFeatures.acousticness}
+                            danceability={audioFeatures.danceability}
+                            energy={audioFeatures.energy}
+                            speechiness={audioFeatures.speechiness}
+                            valence={audioFeatures.valence}
+                            index={audioFeatures.key}
+                        />
                         <Stats 
                             acousticness={audioFeatures.acousticness}
                             danceability={audioFeatures.danceability}
