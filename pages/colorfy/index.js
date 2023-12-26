@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
 import SpotifySearch from "../../components/Colorfy/SpotifySearch";
 import { AuthProvider } from '../../contexts/AuthContext'
-import { useAuth } from "../../contexts/AuthContext";
 import { searchSpotify } from "../../utils/spotify";
 import SearchResults from "../../components/Colorfy/SearchResults";
 
 export default function Colorfy() {
-  const { token, setToken } = useAuth(); // Using useAuth hook
-
+  const [token, setToken] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(!!token); // Determine authentication based on token
   const [isSearchFocused, setIsSearchFocused] = useState(true);
-  const [updatedToken, setUpdatedToken] = useState(token);
 
   const handleLogin = () => {
     // Set a flag indicating a login process is underway
@@ -20,30 +17,36 @@ export default function Colorfy() {
   };
   
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const accessToken = urlParams.get('access_token');
-    console.log("This is the token I should be using ", accessToken)
-
-    if (accessToken) {
-      setToken(accessToken);
-      setUpdatedToken(accessToken)
+    let accessToken = ''
+    try {
+      accessToken = localStorage.getItem('spotifyAccessToken');
+      setToken(accessToken)
       setIsAuthenticated(true);  
+    } catch {
+      console.log("No token in storage")
+    }
+
+    if (!token) {
+      const urlParams = new URLSearchParams(window.location.search);
+      accessToken = urlParams.get('access_token');
+      console.log("This is the token I should be using ", accessToken)
+  
+      if (accessToken) {
+        // setToken(accessToken);
+        localStorage.setItem('spotifyAccessToken', accessToken);
+        setToken(accessToken)
+        setIsAuthenticated(true);  
+      }
     }
 
   }, []);
-
-  useEffect(() => {
-    // Because of the asyncronous nature of React I need this to actually update the token context.
-    console.log("This is the token in local storage ", localStorage.getItem('spotifyAccessToken')) 
-  }, [token]); 
-  
 
   const handleSearch = async () => {
     if (!searchTerm) {
       alert("Please enter a search term.");
       return;
     }
-    const results = await searchSpotify(searchTerm, updatedToken);
+    const results = await searchSpotify(searchTerm, token);
     if (results && results.length != 0) {
       setResults(results)
       setIsSearchFocused(false)

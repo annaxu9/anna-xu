@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../../contexts/AuthContext';
 import useTrackData from '../../hooks/useTrackData';
 import TitleName from '../../components/Colorfy/TitleName';
+import ArtistPictures from '../../components/Colorfy/ArtistsPictures';
 import AlbumArtists from '../../components/Colorfy/AlbumArtists';
 import MainStats from '../../components/Colorfy/MainStats';
 import Genres from '../../components/Colorfy/Genres';
@@ -10,37 +10,32 @@ import Vibes from '../../components/Colorfy/Vibes';
 import Stats from '../../components/Colorfy/Stats';
 
 const SongDetails = () => {
-    const { token } = useAuth(); // Access the token using useAuth
     const router = useRouter();
     const { songId } = router.query;
-    const { trackDetails, audioFeatures, artistsDetails } = useTrackData(songId, token)
+    const { trackDetails, audioFeatures, artistsDetails } = useTrackData(songId)
     const [loading, setLoading] = useState(true)
+    const spotify_link = "https://open.spotify.com/embed/track/" + songId
 
     useEffect(() => {
-        console.log(token)
         if (trackDetails) {
             setLoading(false)
             console.log(trackDetails, audioFeatures, artistsDetails)
         } else {
             setLoading(true)
         }
-    }, [trackDetails, audioFeatures, artistsDetails, token])
+    }, [trackDetails, audioFeatures, artistsDetails])
 
     return (
-        <div className='flex justify-center'>
+        <div className='w-4/5 items-center mx-auto'>
+            <iframe className='w-full mt-9' src={spotify_link} width="200" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             { loading ? <p>Loading</p> :
-                <div className='bg-black p-9 pb-36 w-4/5'>
+                <div className='bg-black p-9 pb-36 w-full'>
                     <div className='bg-white p-5'>
                         <TitleName 
                             name={trackDetails.name}
                             url={trackDetails.external_urls.spotify}
                         />
-                        <AlbumArtists 
-                            artists={artistsDetails} 
-                            album={trackDetails.album.name} 
-                            album_url={trackDetails.album.external_urls.spotify} 
-                            album_image_url={trackDetails.album.images[0].url}
-                        />
+                        <ArtistPictures artists={artistsDetails}/>
                         <MainStats 
                             duration={trackDetails.duration_ms} 
                             date={trackDetails.album.release_date} 

@@ -28,7 +28,7 @@ export default function Stats({acousticness, danceability, energy, tempo, valenc
     return (
         <div className="bg-melrose100 p-2 rounded-lg">
             <h1 className="text-center font-black">Stats</h1>
-            <div className="flex justify-around flex-col sm:flex-row">
+            <div className="flex justify-around flex-col sm:flex-row items-center">
                 <div className="flex-grow w-1/2 p-2">
                     <div>
                         <StatHover 
@@ -66,7 +66,7 @@ export default function Stats({acousticness, danceability, energy, tempo, valenc
                         />
                         <ProgressBar start={0} end={0.4} target={speechiness}/>
                     </div>
-                    <div>
+                    <div className="flex flex-col text-center items-center">
                         <StatHover 
                             title="Tempo"
                             hovertext="Tempo is measured in beats per minute (BPM) and spans a wide range. 
@@ -76,7 +76,7 @@ export default function Stats({acousticness, danceability, energy, tempo, valenc
                             Faster tempos like Allegro (120–168 BPM) are common in upbeat pop, dance, and certain types of classical music. 
                             The very fast Presto (168–200 BPM) and Prestissimo (over 200 BPM) are often found in fast-paced electronic music and some extreme genres of metal."
                         />
-                        <h2 className="pl-3 mb-6">{tempo} BPM ({categorizeTempo(tempo)})</h2>
+                        <h2 className="pl-3 mb-7 text-sm">{Math.round(tempo)} BPM ({categorizeTempo(tempo)})</h2>
                     </div>
                     <div>
                         <StatHover
