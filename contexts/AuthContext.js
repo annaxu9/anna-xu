@@ -5,13 +5,7 @@ const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
 
   const [token, setToken] = useState('');
-  // Save token to local storage whenever it changes
-  useEffect(() => {
-    if (token) {
-        localStorage.setItem('spotifyAccessToken', token);
-    }
-  }, [token]);
-
+  
   useEffect(() => {
     let storedToken = ''
     try {
@@ -21,6 +15,13 @@ export const AuthProvider = ({ children }) => {
         console.error("Error accessing localStorage:", error);
     }
   }, [])
+
+  // Save token to local storage whenever it changes
+  useEffect(() => {
+    if (token) {
+        localStorage.setItem('spotifyAccessToken', token);
+    }
+  }, [token]);
 
   return (
     <AuthContext.Provider value={{ token, setToken }}>

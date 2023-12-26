@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import useTrackData from '../../hooks/useTrackData';
+import TitleName from '../../components/Colorfy/TitleName';
 import AlbumArtists from '../../components/Colorfy/AlbumArtists';
 import MainStats from '../../components/Colorfy/MainStats';
 import Genres from '../../components/Colorfy/Genres';
@@ -15,6 +16,7 @@ const SongDetails = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+        console.log(token)
         if (trackDetails) {
             setLoading(false)
             console.log(trackDetails, audioFeatures, artistsDetails)
@@ -28,12 +30,10 @@ const SongDetails = () => {
             { loading ? <p>Loading</p> :
                 <div className='bg-black p-9 pb-36 w-4/5'>
                     <div className='bg-white p-5'>
-                        <div className='flex items-center justify-between w-full'> 
-                            <button className='flex-shrink-0' onClick={() => router.back()}>
-                                <h1 className='text-xl font-black'>&#60;</h1>
-                            </button>                            
-                            <h1 className='md:text-[2rem] font-black text-center flex-grow'>{trackDetails.name}</h1>
-                        </div>
+                        <TitleName 
+                            name={trackDetails.name}
+                            url={trackDetails.external_urls.spotify}
+                        />
                         <AlbumArtists 
                             artists={artistsDetails} 
                             album={trackDetails.album.name} 

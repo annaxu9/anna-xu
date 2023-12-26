@@ -28,6 +28,7 @@ export default function MainStats({duration, date, popularity}) {
         return formattedNumber
     }
     
+    
 
     return (
         <div className="flex flex-col sm:flex-row  justify-around text-center">

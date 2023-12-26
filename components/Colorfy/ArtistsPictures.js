@@ -6,22 +6,24 @@ export default function ArtistPictures({artists}) {
             {
                 artists.map((artist) => (
                     <div key={artist.id} className="p-1 text-center">
-                        <h2 className="md:text-sm">{artist.name}</h2>
-                        {
-                            artist.images ? (
-                                <div className="max-w-1/3">
-                                    <Image
-                                        src={artist.images[0].url}
-                                        width={120} 
-                                        height={120}
-                                        objectFit="contain"
-                                        className="rounded-full"
-                                    />
-                                </div>
-                            ) : (
-                                <h2 className="md:text-sm">(No Image)</h2>
-                            )
-                        }
+                        <a href={artist.external_urls.spotify} target="__blank">
+                            <h2 className="md:text-sm">{artist.name}</h2>
+                            {
+                                artist.images ? (
+                                    <div className="max-w-1/3">
+                                        <Image
+                                            src={artist.images[0].url}
+                                            width={120} 
+                                            height={120}
+                                            objectFit="contain"
+                                            className="rounded-full"
+                                        />
+                                    </div>
+                                ) : (
+                                    <h2 className="md:text-sm">(No Image)</h2>
+                                )
+                            }
+                        </a>
                     </div>
                 ))
             }

@@ -19,7 +19,7 @@ const useTrackData = (songId, token) => {
                 setArtistsDetails(artistsDetailsData);
             } catch (error) {
                 // console.error("Your session expired. Press OK to login again.");
-                window.location.href = '/api/login';
+                // window.location.href = '/api/login';
             }
         };
 
