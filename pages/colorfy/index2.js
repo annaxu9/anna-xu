@@ -10,45 +10,40 @@ export default function Colorfy() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
-  const [isAuthenticated, setIsAuthenticated] = useState(!!token); // Determine authentication based on token
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Determine authentication based on token
   const [isSearchFocused, setIsSearchFocused] = useState(true);
-  const [updatedToken, setUpdatedToken] = useState(token);
 
   const handleLogin = () => {
-    // Set a flag indicating a login process is underway
     window.location.href = '/api/login';
   };
-  
+
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const accessToken = urlParams.get('access_token');
-    console.log("This is the token I should be using ", accessToken)
 
     if (accessToken) {
       setToken(accessToken);
-      setUpdatedToken(accessToken)
-      setIsAuthenticated(true);  
+      setIsAuthenticated(true);
     }
-
   }, []);
-
-  useEffect(() => {
-    // Because of the asyncronous nature of React I need this to actually update the token context. 
-  }, [token]); 
-  
 
   const handleSearch = async () => {
     if (!searchTerm) {
       alert("Please enter a search term.");
       return;
     }
-    const results = await searchSpotify(searchTerm, updatedToken);
+
+    const results = [{id: 1, name: "Anna", artist: "Anna"}]
+    // const results = await searchSpotify(searchTerm, token);
+    console.log(results, results == Array(0))
     if (results && results.length != 0) {
       setResults(results)
       setIsSearchFocused(false)
-    } else {
-      alert("New Search. Try again!")
+    } else if (results.length == 0) {
+      alert("Bad Search. Try again!")
       setSearchTerm("")
+    }else {
+      setIsAuthenticated(false)
     }
   };
 
