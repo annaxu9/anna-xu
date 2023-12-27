@@ -13,8 +13,8 @@ export default function Home() {
             <div className="xs:w-1/3 flex items-center xs:mt-10 md:mt-0 md:ml-24">
               <Image 
                 src="/me.jpeg"
-                width={200}
-                height={200}
+                width={500}
+                height={500}
               />
             </div>
           </div>

@@ -64,8 +64,8 @@ const MyGrid = () => {
                 <div key={index} className={`p-3 ${startDrop ? 'dropping' : ''} ${startFadeIn ? 'fading-in' : ''}`} onMouseEnter={() => handleHover(index)}>
                     <Image 
                     src={src}
-                    width={72} 
-                    height={72} 
+                    width={500} 
+                    height={500} 
                     className="image"
                     alt={src}
                     />
