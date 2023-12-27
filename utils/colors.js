@@ -1,4 +1,14 @@
 function getFirstColor(valence, danceability, energy, speechiness) {
+
+    // danceable rappy song?
+    if (speechiness > .15 && danceability > .7) {
+        return [[(1 - danceability) * 133 + 290, 100, 65], "because this seems like a song for a bad b*tch like yourself ;)"]
+    }
+    
+    // cool song?
+    if (danceability > .65 && speechiness < .15) {
+        return [[180 - speechiness * 333, 85, 35], "because it gives ocean or a cool/chill vibe?"]
+    }
     
     // HAPPIEST
     if (valence > .9) {
@@ -20,15 +30,7 @@ function getFirstColor(valence, danceability, energy, speechiness) {
         return [[0, 100, (valence - .35) * 142 + 15], "because this seems like a love song"]
     }
 
-    // danceable rappy song?
-    if (speechiness > .15 && danceability > .7) {
-        return [[(1 - danceability) * 133 + 290, 100, 65], "because this seems like a song for a bad b*tch like yourself ;)"]
-    }
-    
-    // cool song?
-    if (danceability > .65 && speechiness < .15) {
-        return [[180 - speechiness * 333, 85, 35], "because it gives ocean or a cool/chill vibe?"]
-    }
+
 
     if (energy > .7) {
         return [[(energy - .7) * 83 + 60, 100, 60], "because it's bright"]
