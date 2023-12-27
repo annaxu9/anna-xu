@@ -13,11 +13,11 @@ export default function NavBar() {
                 <div className="md:hidden mt-4 flex flex-grow flex-row justify-between">
                         { currentPath == "/" ?
                             <Link href="/" className="z-100 text-melrose ">
-                                ☺️ ANNA XU ☺️
+                                ANNA XU
                             </Link>
                                 :
                             <Link href="/" className="z-100 text-black ">
-                                ☺️ ANNA XU ☺️
+                                ANNA XU
                             </Link>   
                         }
                         <ul className="flex justify-center items-center">
