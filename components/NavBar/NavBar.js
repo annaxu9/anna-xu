@@ -8,7 +8,7 @@ export default function NavBar() {
 
     return (
         <div className="flex justify-center mb-4">
-            <nav className="w-5/6">
+            <nav className="w-11/12 sm:w-5/6">
                 {/* Mobile NavBar */}
                 <div className="md:hidden mt-4 flex flex-grow flex-row justify-between">
                         { currentPath == "/" ?
@@ -22,13 +22,13 @@ export default function NavBar() {
                         }
                         <ul className="flex justify-center items-center">
                             <li className="mr-2 text-center">
-                                { currentPath === "/colorfy" ? 
-                                    <Link href="/colorfy" className="z-100 text-melrose  ">
-                                        colorfy
+                                { currentPath === "/vibe-check" ? 
+                                    <Link href="/vibe-check" className="z-100 text-melrose  ">
+                                        vibe check
                                     </Link>
                                         :
-                                    <Link href="/colorfy" className="z-100 css-rainbow-text  ">
-                                        colorfy
+                                    <Link href="/vibe-check" className="z-100 css-rainbow-text  ">
+                                        vibe check
                                     </Link>   
                                 }
                             </li>
@@ -75,13 +75,13 @@ export default function NavBar() {
                     </div>
                     <ul className="flex justify-center items-center">
                         <li className="mr-2 text-center hover:bg-color4 ">
-                            { currentPath === "/colorfy" ? 
-                                <Link href="/colorfy" className="z-100 text-melrose  rounded">
-                                    colorfy
+                            { currentPath === "/vibe-check" ? 
+                                <Link href="/vibe-check" className="z-100 text-melrose  rounded">
+                                    vibe check
                                 </Link>
                                     :
-                                <Link href="/colorfy" className="z-100 css-rainbow-text rounded">
-                                    colorfy
+                                <Link href="/vibe-check" className="z-100 css-rainbow-text rounded">
+                                    vibe check
                                 </Link>   
                              
                             }

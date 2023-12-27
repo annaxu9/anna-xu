@@ -8,7 +8,7 @@ export default function SearchResults({results, isSearchFocused}) {
     const router = useRouter();
 
     const handleSongClick = (trackId) => {
-        router.push(`/colorfy/${trackId}`);
+        router.push(`/vibe-check/${trackId}`);
       };
 
     useEffect(() => {
