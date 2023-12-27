@@ -31,4 +31,6 @@ const SpotifySearch = forwardRef(({ searchTerm, onSearchChange, onSearchSubmit, 
   );
 });
 
+SpotifySearch.displayName = 'SpotifySearch';
+
 export default SpotifySearch;

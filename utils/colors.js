@@ -31,10 +31,10 @@ function getFirstColor(valence, danceability, energy, speechiness) {
     }
 
     if (energy > .7) {
-        return [[(energy - .7) * 83 + 60, 100, 60], "because it's bright"]
+        return [[(energy - .7) * 83 + 60, 100, 60], "because it&apos;s bright"]
     }
 
-    return [[0, 0, 0], "because we don't really know the vibes but think black would fit"]
+    return [[0, 0, 0], "because we don&apos;t really know the vibes but think black would fit"]
 }
 
 function getSecondColor(firstColor, energy) {

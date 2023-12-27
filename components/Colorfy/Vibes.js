@@ -17,7 +17,7 @@ export default function Vibes({acousticness, energy, danceability, valence, spee
     <div>
         <p className="text-center mt-2">{firstColor[1]}</p>
         <p className="text-center mt-2">with {energyComment(energy)} energy...</p>
-        <p className="text-center mt-2 mb-3">and it's in the {getThirdColor(index)[1]} key</p>
+        <p className="text-center mt-2 mb-3">and it&apos;s in the {getThirdColor(index)[1]} key</p>
     </div>
 </div>
 
