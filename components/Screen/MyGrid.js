@@ -8,10 +8,13 @@ const gridImages = [
     "/home-images/cr7.png", "/home-images/cr8.png", "/home-images/cr9.png",
     "/home-images/cr10.png", "/home-images/cr11.png", "/home-images/cr12.png", 
     "/home-images/cr13.png", "/home-images/cr14.png", "/home-images/cr15.png",
-    "/home-images/blueberries.jpg", "/home-images/mango-mysic.jpg", "/home-images/tonys-chocolate.png", 
-    "/home-images/uo.png", "/home-images/070shake.jpg", "/home-images/chinese-duck.png", "/home-images/golden-pineapple.png",
-    "/home-images/guava-goddess.png", "/home-images/spotify.png", "/home-images/strawberry-serenity.png",
-    "/home-images/vaseline.jpeg", "/home-images/volleyball.png", "/home-images/yale.png"
+    "/home-images/cr16.png", "/home-images/lavender.png", "/home-images/mu.png",
+    "/home-images/nebraska.png", "/home-images/rbhs.png", "/home-images/pride.png",
+    "/home-images/blueberries.png", "/home-images/gingerade.png", "/home-images/tonys-chocolate.png", 
+    "/home-images/uo.png", "/home-images/070Shake.png", "/home-images/chinese-duck.png", "/home-images/trilogy.png",
+    "/home-images/saggitarius.png", "/home-images/spotify.png", "/home-images/strawberry-lemonade.png",
+    "/home-images/vaseline.png", "/home-images/volleyball.png", "/home-images/yale.png", 
+    "/home-images/webdev.png", "/home-images/bike.png"
   ];
 
 
@@ -24,7 +27,7 @@ const MyGrid = () => {
 
     const [startDrop, setStartDrop] = useState(false);
     const [startFadeIn, setStartFadeIn] = useState(false);
-    const [currentImages, setCurrentImages] = useState(Array.from({ length: 40 }, getRandomImage));
+    const [currentImages, setCurrentImages] = useState(Array.from({ length: 6 }, getRandomImage));
   
     const handleGridClick = () => {
       setStartDrop(true);
@@ -46,13 +49,12 @@ const MyGrid = () => {
 
     return (
       <div className='relative'>
-        <div className="grid-container" onClick={handleGridClick}>
+        <div className="grid-container pb-5" onClick={handleGridClick}>
             {currentImages.map((src, index) => (
-                index === 0 || index === 3 || index === 10 || index === 11 || index === 16 || index === 17 || index === 20 || index === 25 || index === 26 || index === 30 || index === 35 || index === 37 ? (
-                <div key={index} className='w-100 h-100 bg-white'>
-                    {/* Content here */}
-                </div>
-                ) : index === 14 ? (
+                index === 6 || index === 2 || index === 7 || index === 8 ? (
+                  <div key={index} className='bg-white w-100 h-100'></div>
+                ) :
+                index === 0 ? (
                     <div key={index} className={`w-100 h-100 d-flex justify-content-center align-items-center ${startDrop ? 'dropping' : ''} ${startFadeIn ? 'fading-in' : ''}`}>
                         <Star />
                     </div>
@@ -65,16 +67,16 @@ const MyGrid = () => {
                     width={72} 
                     height={72} 
                     className="image"
-                    alt="Grid Image"
+                    alt={src}
                     />
                 </div>
                 )
             ))}
         </div>
         {startDrop && !startFadeIn && (
-          <div className="absolute top-0 left-0 right-0 bg-melrose w-full h-full text-center p-40 fade-in-out">
-            <h1 className="text-white">hello and welcome! i hope you enjoy my site and take some time to explore :) -&nbsp;anna</h1>
-            <p className="text-white mt-80">p.s. click on the fish</p>
+          <div className="absolute p-3 top-0 left-0 right-0 bg-melrose w-full h-full text-center fade-in-out">
+            <h1 className="text-white mt-24">hello and welcome! i hope you enjoy my site and take some time to explore :) -&nbsp;anna</h1>
+            <p className="text-white mt-10">p.s. click on the fish</p>
           </div>
         )}
 

@@ -28,8 +28,8 @@ const SongDetails = () => {
     return (
         <div className='w-4/5 items-center mx-auto'>
             <iframe className='w-full mt-9' src={spotify_link} width="200" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            { loading ? <p>Loading</p> :
-                <div className='bg-black p-9 pb-36 w-full'>
+            { loading ? <p className='text-center'>Loading...</p> :
+                <div className='bg-black p-9 w-full'>
                     <div className='bg-white p-5'>
                         <TitleName 
                             name={trackDetails.name}
