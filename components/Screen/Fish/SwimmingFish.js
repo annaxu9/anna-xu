@@ -26,7 +26,7 @@ function SwimmingFish() {
           <Image src="/home-images/fish.png" alt="Swimming Fish Right" width={100} height={50} />
           {showBubble && (
             <>
-              <div className={styles.speechBubble}>Just keep swimming!! You've got it</div>
+              <div className={styles.speechBubble}>Just keep swimming!! You&apos;ve got it</div>
               <div className={styles.smallBubbleOneLeft}></div>
               <div className={styles.smallBubbleTwoLeft}></div>
             </>
@@ -38,7 +38,7 @@ function SwimmingFish() {
           <Image src="/home-images/flipped-fish.png" alt="Swimming Fish Left" width={100} height={50} />
           {showBubble && (
             <>
-              <div className={styles.speechBubble}>Just keep swimming!! You've got it</div>
+              <div className={styles.speechBubble}>Just keep swimming!! You&apos;ve got it</div>
               <div className={styles.smallBubbleOneRight}></div>
               <div className={styles.smallBubbleTwoRight}></div>
             </>
