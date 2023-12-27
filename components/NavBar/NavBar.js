@@ -12,11 +12,11 @@ export default function NavBar() {
                 {/* Mobile NavBar */}
                 <div className="md:hidden mt-4 flex flex-grow flex-row justify-between">
                         { currentPath == "/" ?
-                            <Link href="/" className="z-100 text-melrose ">
+                            <Link href="/" className="z-100 text-melrose ml-2">
                                 ANNA XU
                             </Link>
                                 :
-                            <Link href="/" className="z-100 text-black ">
+                            <Link href="/" className="z-100 text-black ml-2">
                                 ANNA XU
                             </Link>   
                         }
