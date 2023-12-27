@@ -1,114 +1,71 @@
 import React, { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
 import SpotifySearch from "../../components/Colorfy/SpotifySearch";
 import { AuthProvider } from '../../contexts/AuthContext'
-import { useAuth } from "../../contexts/AuthContext";
+import { searchSpotify } from "../../utils/spotify";
+import SearchResults from "../../components/Colorfy/SearchResults";
 
 export default function Colorfy() {
-  const { token, setToken } = useAuth(); // Using useAuth hook
-  const router = useRouter();
-
+  const [token, setToken] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(!!token); // Determine authentication based on token
-  const [newToken, setNewToken] = useState('')
+  const [isSearchFocused, setIsSearchFocused] = useState(true);
 
   const handleLogin = () => {
+    // Set a flag indicating a login process is underway
     window.location.href = '/api/login';
   };
-
+  
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const accessToken = urlParams.get('access_token');
-
-    if (accessToken) {
-      console.log('New access token?' + accessToken)
-      setToken(accessToken);
-      setNewToken(accessToken);
-      setIsAuthenticated(true);
-    }
-  }, []);
-
-  async function searchSpotify(query) {
-    if (!token) {
-      alert("Not authenticated");
-      return;
-    }
-
-    let updatedToken = token
-    if (newToken != "") {
-      updatedToken = newToken
-    } 
-    setToken(updatedToken);
-    console.log(updatedToken)
-
+    let accessToken = ''
     try {
-      const params = new URLSearchParams({ q: query, type: 'track' });
-      const response = await fetch(`https://api.spotify.com/v1/search?${params.toString()}`, {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${updatedToken}`
-        }
-      });
+      accessToken = localStorage.getItem('spotifyAccessToken');
+      setToken(accessToken)
+      setIsAuthenticated(true);  
+    } catch {
+      console.log("No token in storage")
+    }
 
-      if (!response.ok) {
-        throw new Error('Failed to fetch');
-      }
-
-      const data = await response.json();
-      const tracks = data.tracks.items.map(track => ({
-        name: track.name,
-        artist: track.artists.map(artist => artist.name).join(', '),
-        id: track.id
-      }));
-
-      setResults(tracks);
-    } catch (error) {
-      alert("An error occurred: " + error.message);
-      console.log(error)
-      if (error.message === "Failed to fetch") {
-        // Handle 401 Unauthorized error
-        alert("Session expired. Please login again.");
-        handleLogin(); // Redirect to login or refresh the token
-        return;
+    if (!token) {
+      const urlParams = new URLSearchParams(window.location.search);
+      accessToken = urlParams.get('access_token');
+      console.log("This is the token I should be using ", accessToken)
+  
+      if (accessToken) {
+        // setToken(accessToken);
+        localStorage.setItem('spotifyAccessToken', accessToken);
+        setToken(accessToken)
+        setIsAuthenticated(true);  
       }
     }
-  }
+
+  }, []);
 
   const handleSearch = async () => {
     if (!searchTerm) {
       alert("Please enter a search term.");
       return;
     }
-    await searchSpotify(searchTerm);
-  };
-
-  const handleSongClick = (trackId) => {
-    router.push(`/colorfy/${trackId}`);
+    const results = await searchSpotify(searchTerm, token);
+    if (results && results.length != 0) {
+      setResults(results)
+      setIsSearchFocused(false)
+    } else {
+      alert("New Search. Try again!")
+      setSearchTerm("")
+    }
   };
 
   return (
 
     <AuthProvider>
       <div className="p-5 text-center animated_rainbow_1">colorfy</div>
-      {!isAuthenticated && <button onClick={handleLogin}>Login with Spotify</button>}
+      {!isAuthenticated && <div className="flex justify-center"><button className="mt-10 px-6 py-2 bg-melrose text-white rounded hover:bg-blue-700 transition-colors duration-200 ease-in-out shadow-lg" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }} onClick={handleLogin}>Login with Spotify</button></div>}
       {isAuthenticated && (
         <div className="relative flex flex-col justify-center items-center">
-          <SpotifySearch searchTerm={searchTerm} onSearchChange={setSearchTerm} onSearchSubmit={handleSearch}/>
-
-          <div id="results" className="absolute top-full w-4/5 mt-1 bg-white  border-white-300 rounded-md shadow-lg max-h-60 overflow-y-auto z-10">
-            {results.map(track => (
-              <p 
-                key={track.id} 
-                onClick={() => handleSongClick(track.id)}
-                className="p-2 hover:bg-gray-100 cursor-pointer"
-              >
-                {track.name} by {track.artist}
-              </p>
-            ))}
-          </div>
+          <SpotifySearch searchTerm={searchTerm} onSearchChange={setSearchTerm} onSearchSubmit={handleSearch} setIsSearchFocused={setIsSearchFocused}/>
+          <SearchResults results={results} isSearchFocused={isSearchFocused}/>
         </div>
-
 
       )}
     </AuthProvider>

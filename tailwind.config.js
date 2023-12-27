@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'md': '500px',
+        'xs': '420px',
+        'sm': '500px',
+        'md': '650px',
       },
       fontFamily: {
         sans: ['DM Sans', 'sans-serif'],
@@ -16,6 +18,7 @@ module.exports = {
         pinknew: "#F8D4FB",
         orangenew: "#E17344",
         melrose: "#9DA0FF",
+        melrose100: "#C7C8FF",
         downriver: "#091647",
       },
     },
