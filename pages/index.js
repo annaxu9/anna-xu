@@ -12,9 +12,15 @@ export default function Home() {
             <div className="hidden xs:block"><MyGrid className="w-2/3"/></div>
             <div className="xs:w-1/3 flex items-center xs:mt-10 md:mt-0 md:ml-24">
               <Image 
+<<<<<<< Updated upstream
                 src="/me.jpeg"
                 width={200}
                 height={200}
+=======
+                src="/home-images/me.jpeg"
+                width={500}
+                height={500}
+>>>>>>> Stashed changes
               />
             </div>
           </div>

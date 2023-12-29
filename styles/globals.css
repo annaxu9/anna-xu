@@ -13,6 +13,42 @@ a {
   box-sizing: border-box;
 }
 
+.nervada {
+  font-family: 'Nervada', sans-serif;
+  font-style: italic;
+  font-size: 30px;
+  line-height: .8;
+}
+
+.nervada2 {
+  font-family: 'Nervada', sans-serif;
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: 'Nervada';
+  src: url('../public/fonts/nervada/nervada.woff') format('woff'),
+  url('../public/fonts/nervada/nervada.woff2') format('woff2');
+}
+
+.bavista {
+  font-family: 'Bavista Soulare';
+  font-style: italic;
+  font-size: 39px;
+  line-height: .8;
+}
+
+.bavista2 {
+  font-family: 'Bavista Soulare';
+  font-size: 25px;
+}
+
+@font-face {
+  font-family: 'Bavista Soulare';
+  src: url('../public/fonts/bavista-soulare/Bavista_Soulare.woff') format('woff'),
+  url('../public/fonts/bavista-soulare/Bavista_Soulare.woff2') format('woff2');
+}
+
 .sine-wave-background {
   width: 100%; /* Adjust width as needed */
   height: 200px; /* Adjust height as needed */
@@ -20,8 +56,6 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-
 
 .wave-background {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath fill='%233E3E3E' d='M0,30 C60,90 50,120 60,150 C150,200 90,110 250,150 C550,100 250,120 300,150 C350,180 350,120 200,150 C450,180 450,120 500,150 C550,180 550,120 600,150 C650,150 950,120 700,150 C50,350 0,120 330,450 C50,180 850,160 00,150 C950,10 550,120 6000, 710 L900,300 L0,100 Z' /%3E%3C/svg%3E");

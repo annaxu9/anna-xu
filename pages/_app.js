@@ -6,7 +6,8 @@ function MyApp({ Component, pageProps }) {
   return (
       <AuthProvider>
         <NavBar />
-        <Component {...pageProps} />     
+        <div className="mt-20"></div>
+        <Component {...pageProps}/>     
       </AuthProvider>
 
   )
