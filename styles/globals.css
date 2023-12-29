@@ -72,8 +72,8 @@ a {
 }
 
 .image {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   object-fit: contain;
 }
 

@@ -1,13 +1,12 @@
 import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import useTrackData from '../../hooks/useTrackData';
-import TitleName from '../../components/Colorfy/TitleName';
-import ArtistPictures from '../../components/Colorfy/ArtistsPictures';
-import AlbumArtists from '../../components/Colorfy/AlbumArtists';
-import MainStats from '../../components/Colorfy/MainStats';
-import Genres from '../../components/Colorfy/Genres';
-import Vibes from '../../components/Colorfy/Vibes';
-import Stats from '../../components/Colorfy/Stats';
+import TitleName from '../../components/Vibe-Check/TitleName';
+import ArtistPictures from '../../components/Vibe-Check/ArtistsPictures';
+import MainStats from '../../components/Vibe-Check/MainStats';
+import Genres from '../../components/Vibe-Check/Genres';
+import Vibes from '../../components/Vibe-Check/Vibes';
+import Stats from '../../components/Vibe-Check/Stats';
 
 const SongDetails = () => {
     const router = useRouter();

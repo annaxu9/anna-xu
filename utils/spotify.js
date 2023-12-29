@@ -24,7 +24,7 @@ const searchSpotify = async(query, token) => {
     } catch (error) {
       if (error.message === "Failed to fetch") {
         // Handle 401 Unauthorized error
-        alert("Your session expired. Press OK to Login again.");
+        alert("Your session either expired or you need to login. Press OK to login.");
         window.location.href = '/api/login';
       } else {
         alert("Something went wrong. Please try again later.")

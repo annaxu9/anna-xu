@@ -29,7 +29,7 @@ export default async function handler(req, res) {
     if (response.ok) {
         // Redirect with tokens or send them directly
         // (you may want to adjust this part based on your front-end needs)
-        res.redirect(`/colorfy?access_token=${data.access_token}`);
+        res.redirect(`/vibe-check?access_token=${data.access_token}`);
       } else {
         res.status(400).json({ error: 'invalid_token' });
       }

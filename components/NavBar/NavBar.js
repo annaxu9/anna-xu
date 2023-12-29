@@ -12,23 +12,23 @@ export default function NavBar() {
                 {/* Mobile NavBar */}
                 <div className="md:hidden mt-4 flex flex-grow flex-row justify-between">
                         { currentPath == "/" ?
-                            <Link href="/" className="z-100 text-melrose ">
-                                ☺️ ANNA XU ☺️
+                            <Link href="/" className="z-100 text-melrose ml-2">
+                                ANNA XU
                             </Link>
                                 :
-                            <Link href="/" className="z-100 text-black ">
-                                ☺️ ANNA XU ☺️
+                            <Link href="/" className="z-100 text-black ml-2">
+                                ANNA XU
                             </Link>   
                         }
                         <ul className="flex justify-center items-center">
                             <li className="mr-2 text-center">
-                                { currentPath === "/colorfy" ? 
-                                    <Link href="/colorfy" className="z-100 text-melrose  ">
-                                        colorfy
+                                { currentPath === "/vibe-check" ? 
+                                    <Link href="/vibe-check" className="z-100 text-melrose  ">
+                                        vibe check
                                     </Link>
                                         :
-                                    <Link href="/colorfy" className="z-100 css-rainbow-text  ">
-                                        colorfy
+                                    <Link href="/vibe-check" className="z-100 css-rainbow-text  ">
+                                        vibe check
                                     </Link>   
                                 }
                             </li>
@@ -75,13 +75,13 @@ export default function NavBar() {
                     </div>
                     <ul className="flex justify-center items-center">
                         <li className="mr-2 text-center hover:bg-color4 ">
-                            { currentPath === "/colorfy" ? 
-                                <Link href="/colorfy" className="z-100 text-melrose  rounded">
-                                    colorfy
+                            { currentPath === "/vibe-check" ? 
+                                <Link href="/vibe-check" className="z-100 text-melrose  rounded">
+                                    vibe check
                                 </Link>
                                     :
-                                <Link href="/colorfy" className="z-100 css-rainbow-text rounded">
-                                    colorfy
+                                <Link href="/vibe-check" className="z-100 css-rainbow-text rounded">
+                                    vibe check
                                 </Link>   
                              
                             }
