@@ -7,13 +7,8 @@ export default function NavBar() {
     const currentPath = router.pathname;
 
     return (
-<<<<<<< Updated upstream
-        <div className="flex justify-center mb-4">
-            <nav className="w-5/6">
-=======
         <div className="flex justify-center mb-4 fixed top-0 left-0 w-full bg-white z-50">
             <nav className="w-11/12 sm:w-5/6">
->>>>>>> Stashed changes
                 {/* Mobile NavBar */}
                 <div className="md:hidden mt-4 flex flex-grow flex-row justify-between">
                         { currentPath == "/" ?
