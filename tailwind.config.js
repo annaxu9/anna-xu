@@ -22,6 +22,7 @@ module.exports = {
         intermediate: "#D1FF95", 
         advanced: "#95FFDF",
         yale: "#103567",
+        pink: "#FF6275",
       },
     },
   },

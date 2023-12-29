@@ -38,11 +38,11 @@ export default function Resume() {
                             coursework.map((course, index) => { 
                                 if (index != coursework.length - 1)
                                     return (
-                                        <p>{course},&nbsp;</p>
+                                        <p key={index}>{course},&nbsp;</p>
                                     )
                                 else {
                                     return (
-                                        <p>{course}</p>
+                                        <p key={index}>{course}</p>
                                     )                                    
                                 }
                             })
@@ -54,11 +54,11 @@ export default function Resume() {
                             nextsem.map((course, index) => { 
                                 if (index != nextsem.length - 1)
                                     return (
-                                        <p>{course},&nbsp;</p>
+                                        <p key={index}>{course},&nbsp;</p>
                                     )
                                 else {
                                     return (
-                                        <p>{course}</p>
+                                        <p key={index}>{course}</p>
                                     )                                    
                                 }
                             })
