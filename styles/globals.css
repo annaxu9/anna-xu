@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+.bullet {
+  list-style-type: circle;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -49,6 +53,39 @@ a {
   url('../public/fonts/bavista-soulare/Bavista_Soulare.woff2') format('woff2');
 }
 
+@keyframes animatedBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.grow-on-hover {
+  animation: grow-shrink 10s linear infinite paused;
+}
+
+.grow-on-hover:hover {
+  animation-play-state: running;
+}
+
+@keyframes grow-shrink {
+  0% { font-size: 17px; }
+  50% { font-size: 70px; } /* Adjust font size as desired */
+  100% {font-size: 17px;}
+}
+
+.wobble-text {
+  animation: wobble 5s ease-in-out infinite;
+}
+
+@keyframes wobble {
+  0%, 10%, 20%, 30%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(-5deg); }
+  25% { transform: rotate(5deg); }
+}
+
+
+
+
 .sine-wave-background {
   width: 100%; /* Adjust width as needed */
   height: 200px; /* Adjust height as needed */
@@ -72,8 +109,8 @@ a {
 }
 
 .image {
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 

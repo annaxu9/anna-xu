@@ -1,6 +1,6 @@
 export default function Experience() {
     return (
-        <div className="w-4/5 mx-auto">
+        <div>
             <h3><span className="font-bold">URBN Web Software Engineering Intern</span> <br></br> Philadelphia, PA (June 2023–August 2023)</h3>
             <p className="text-center my-4"> 
                 URBN is a portfolio of global consumer brands comprising &nbsp;

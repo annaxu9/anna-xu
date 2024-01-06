@@ -1,9 +1,12 @@
 import Skill from "../components/Resume/Skill"
 
-const experience = 
-{
-  "html" : ""
-}
+const skills = 
+[
+  {
+    "name" : "HTML",
+    "subskills": []
+  }, 
+]
 
 
 export default function Test() {
@@ -34,7 +37,10 @@ export default function Test() {
           <Skill level="advanced" name="JavaScript">
             <div className="flex justify-center gap-2 flex-wrap">
               <Skill level="advanced" name="React">
-                <Skill level="intermediate" name="Next"/>
+                <div className="flex justify-center gap-2 flex-wrap">
+                  <Skill level="intermediate" name="Reach Native"/>
+                  <Skill level="intermediate" name="Next"/>
+                </div>
               </Skill>
               <Skill level="intermediate" name="Vue">
                 <Skill level="intermediate" name="Nuxt"/>
