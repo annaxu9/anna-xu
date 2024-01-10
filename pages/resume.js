@@ -66,9 +66,8 @@ export default function Resume() {
                         }
                     </div>
                 </div>
-
-                <h1 className="bavista2 text-center">Ski<span className="nervada2">ll</span>s </h1>
-                <Skills />
+                {/* <h1 className="bavista2 text-center">Ski<span className="nervada2">ll</span>s </h1>
+                <Skills /> */}
                 <h1 className="text-center bavista2">Experience </h1>
                 <Experience />
                 <h1 className="text-center bavista2">Projects </h1>
