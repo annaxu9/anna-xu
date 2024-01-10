@@ -15,12 +15,12 @@ export default function Experience() {
                 <li>Led the planning and development of The Internship Showcase Site.</li>
                 <ul className="bullet ml-12">
                     <li>Utilized Vue.js, Nuxt.js, and TailwindCSS to create a user-friendly platform based on markdown file-based blogs.</li>
-                    <li>Collaborated closely with the URBN Talent and Communications team to ensure alignment with the organization's recruiting goals. The portal is currently in the final stages of review and will go live shortly.</li>
+                    <li>Collaborated closely with the URBN Talent and Communications team to ensure alignment with the organization&apos;s recruiting goals. The portal is currently in the final stages of review and will go live shortly.</li>
                     <li>Took ownership of data collection by designing and conducting surveys among the interns.</li>
                     <li>Designed the website to seamlessly integrate with the URBN aesthetic while infusing it with my creative insight.</li>
                     <li>Presented my project in front of the URBN Board of Directors, managers, and fellow interns.</li>
                 </ul>
-                <li>Led Design for Team S-AI-ze Em’ at URBN’s annual Hackathon.</li>
+                <li>Led Design for Team S-AI-ze Em&apos; at URBN&apos;s annual Hackathon.</li>
                 <ul className="bullet ml-12">
                     <li>Won 3rd place in the Hackathon.</li>
                     <li>Presented to the URBN Board of Directors and secured funding for future development for the feature that uses an AI model to suggest size to users for products based on the user’s photo and past reviews from other users.</li>

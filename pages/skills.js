@@ -56,12 +56,12 @@ export default function Skills() {
         <div className="w-11/12 mx-auto">
             <h1 className="text-center">My Web Development Journey</h1>
             <p className=" p-2 m-2 bg-lightgray">
-            On a good day, coding can be a fun little puzzle. On a bad day, coding can make you want to commit violence against the most expensive thing you own. As someone who didn’t really code before college, I found myself often fighting an uphill battle.
+            On a good day, coding can be a fun, invigorating puzzle. On a bad day, coding can make you want to commit violence against the most expensive thing you own. As someone who didn&apos;t really code before college, I found myself often fighting an uphill battle.
 
-            That's why, before my senior year, I took a gap semester. While I taught CS50 and had extracurricular commitments, without classes I was able to carve out the space to finally fill my conceptual holes, practice without much stress, and explore. I'm proud to share that when I used to feel apprehension at the thought of opening VSCode, I now engage with the application spontaneously and many times even eagerly. Below you can take a look at my skills!
+            That&apos;s why, before my senior year, I took a gap semester. While I taught CS50 and had extracurricular commitments, without classes I was able to carve out the space to finally fill my conceptual holes, practice without much stress, and explore. I&apos;m proud to share that when I used to feel apprehension at the thought of opening VSCode, I now engage with the application spontaneously and many times even eagerly. Below you can take a look at my skills!
             </p>
 
-            <h1 className="text-center">Anna's Skills</h1>
+            <h1 className="text-center">Anna&apos;s Skills</h1>
 
             <div className="p-2 m-2 flex items-center justify-center">
                 <h1 className="m-2 p-2">Filter By Category:</h1>
@@ -81,14 +81,14 @@ export default function Skills() {
                 <div className="flex flex-col">
                     {filteredSkills.map((skill, index) => {
                         return (
-                            <div>
+                            <div key={index}>
                                 <div 
                                     className="flex justify-between items-center p-4 m-2 rounded-lg cursor-pointer"
                                     style={{ backgroundColor: hoverIndex === index ? lightenColor(color) : color}}
                                       onMouseEnter={() => setHoverIndex(index)}
                                       onMouseLeave={() => setHoverIndex(null)}
                                       onClick={() => setSelectedSkillIndex(selectedSkillIndex === index ? null : index)}
-                                    key={index}
+                                    
                                 >
                                     <h1 className="font-bold">{skill.name}</h1>
                                     <h1 className="italic">{levelDescriptions[skill.level]}</h1>

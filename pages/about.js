@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function AboutMe() {
     return (
         <div className="w-4/5 mx-auto flex flex-col items-center">
-            <p className="text-center">Hi! My name is Anna and other than coding, here's some more about me! (Coming Soon)</p> 
+            <p className="text-center">Hi! My name is Anna and other than coding, here&apos;s some more about me! (Coming Soon)</p> 
             <div className="m-2 p-2  max-w-[400px] h-auto border-melrose border-2">
                 <div className="p-2  h-auto border-double border-pink border-2"> 
                     <div className="p-2  h-auto border-dashed border-yale border-2"> 
