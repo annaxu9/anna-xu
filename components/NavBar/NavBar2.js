@@ -46,7 +46,7 @@ export default function NavBar() {
 
 
                     <ul className="flex justify-center items-center">
-                        <li className="mr-2 text-center hover:bg-color4 ">
+                        <li className="mr-1.5 sm:mr-2 text-center hover:bg-color4 ">
                             { currentPath === "/vibe-check" ? 
                                 <Link href="/vibe-check" className="z-100 text-melrose  rounded">
                                     vibe check
@@ -58,14 +58,14 @@ export default function NavBar() {
                              
                             }
                         </li>
-                        <li className="mr-2 p-1 text-center hover:bg-color4">
+                        <li className="mr-1.5 p-1 text-center hover:bg-color4">
                             <a href="https://www.linkedin.com/in/anna-xu-354271192/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <FaLinkedin size={23} />
+                                <FaLinkedin size={22} />
                             </a>
                         </li>
-                        <li className="mr-2 p-1 text-center hover:bg-color4">
+                        <li className="mr-1.5 p-1 text-center hover:bg-color4">
                             <a href="https://www.instagram.com/annax.u/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                                <FaInstagram size={23} />
+                                <FaInstagram size={22} />
                             </a>                    
                         </li>
                         <li className=" p-1.5 text-center hover:bg-color4 relative">
