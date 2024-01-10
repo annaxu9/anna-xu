@@ -71,7 +71,7 @@ export default function NavBar() {
                         <li className=" p-1.5 text-center hover:bg-color4 relative">
                             <button onClick={toggleDropdown} className="flex">
                                 more 
-                                <span className="mt-1">
+                                <span className="hidden sm:block mt-1">
                                     <Image 
                                         src="/icons/arrow.png" 
                                         width={20} 
