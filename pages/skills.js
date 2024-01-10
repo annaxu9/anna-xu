@@ -77,7 +77,7 @@ export default function Skills() {
 
             </div>
 
-            <div className="md:w-4/5 mx-auto">
+            <div className="md:w-4/5 mx-auto mb-5">
                 <div className="flex flex-col">
                     {filteredSkills.map((skill, index) => {
                         return (

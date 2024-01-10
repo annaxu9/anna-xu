@@ -31,11 +31,14 @@ export default function Home() {
           <p className=""><span className="css-rainbow-text grow-on-hover">Creative</span>, collaborative, and goal-oriented student working toward a career in software engineering, leaning more towards frontend development, to create platforms that are user friendly, well-designed, and <span className="font-bold grow-on-hover ">impact society positively</span>. Anna is qualified by her years of coding experience, her number of quality projects, and through teaching others how to code.</p>
         </div>
       </div>
-      <div className="flex flex-col w-3/4 mx-auto p-5">
-       <Link href="/resume">📜 Take a look at my resume </Link>
-       <Link href="/about/my-journey">🧗🏻‍♀️ Learn More About My CS Journey Here </Link>
-       <Link href="/about/me">Learn More About Me Here</Link>
+      <div className="flex justify-center mb-10">
+        <div className="flex flex-col">
+        <Link className="m-2" href="/skills">⭑ Check out my skills</Link>
+        <Link className="m-2" href="/resume">⭑ See my resume </Link>
+        <Link className="m-2" href="/about">⭑ Learn about my interests</Link>
+        </div>
       </div>
+
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Skills from '../components/Resume/skills';
-import Experience from './test2';
+import Experience from '../components/Resume/Experience';
 
 export default function Resume() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -70,11 +69,9 @@ export default function Resume() {
                 <Skills /> */}
                 <h1 className="text-center bavista2">Experience </h1>
                 <Experience />
-                <h1 className="text-center bavista2">Projects </h1>
+                {/* <h1 className="text-center bavista2">Projects </h1>
                 <h1 className="text-center bavista2">Extracurricu<span className="nervada2">l</span>ars</h1>
-                <h1 className='text-center'>Other interests and hobbies covered in About Me</h1>
-
-
+                <h1 className='text-center'>Other interests and hobbies covered in About Me</h1> */}
             </div>
         </div>
     )
