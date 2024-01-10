@@ -1,13 +1,44 @@
-export default function About() {
-    return(
-        <div className="w-3/4 mx-auto">
-            <h1 className="text-center mb-3">About Vibe Check</h1>
-            <p className="mb-10">
-            &emsp;&emsp; I created Vibe Check because I love music and colors. <br></br>
-            &emsp;&emsp; Music helps me recenter and (literally) get into a rhythm, whether that’s for coding, running, or just vibing. I listen to hours and hours of music every day. And this is not an exaggeration. Spotify Wrapped exposed my listening habits, and I had somehow accululated over 100,000 minutes this past year😅. <br></br>
-            &emsp;&emsp; Color, to me, is like the spice of life (I must find a less cheesy way to put this). While we aren’t always cognizant of it, the colors that we are surrounded by affect us much more than we realize. Imagine if the sky changed colors every day… that would be crazy! Forget about seasonal depression—we would have to worry about color sickness or something. Practically speaking though, as an artist color has always stressed me out because it’s the most noticeable part of a project but also the easiest to mess up. <br></br>
-            &emsp;&emsp; <span className="bg-melrose100">Both color and music have the power to set a vibe.</span> Over my gap, I wondered if I could somehow connect the two. Why? I don’t know? Sounded cool! With Vibe Check you can search any song in Spotify’s database and see its data. I also worked on an algorithm that gives the song a color scheme. This is still a work in progress but feel free to play around and explore :) 
-            </p>
+import Image from 'next/image'
+
+export default function AboutMe() {
+    return (
+        <div className="w-4/5 mx-auto flex flex-col items-center">
+            <p className="text-center">Hi! My name is Anna and other than coding, here&apos;s some more about me! (Coming Soon)</p> 
+            <div className="m-2 p-2  max-w-[400px] h-auto border-melrose border-2">
+                <div className="p-2  h-auto border-double border-pink border-2"> 
+                    <div className="p-2  h-auto border-dashed border-yale border-2"> 
+                        <div className="p-2  h-auto flex flex-col items-center">
+                            <Image 
+                                src="/about-images/matcha-me.png"
+                                width={150}
+                                height={150}
+                                layout="responsive"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* <div className="ml-2">
+                <h1>Some Things I Care About</h1>
+                <h1>Free Palestine / End This War!</h1>
+                <h1>Mental Health</h1>
+                <h1>LGBTQ+ Rights</h1>
+                <h1>Black Lives Matter</h1>
+                <h1>Environment</h1>
+            </div>
+            <div>
+                <h1>Some Interests I have</h1>
+                <h1>Movies</h1>
+                <h1>Books</h1>
+                <h1>Podcasts</h1>
+                <h1>Music</h1>
+                <h1>Creating Art</h1>
+                <h1>Writing/Journalism</h1>
+                <h1>Theater</h1>
+                <h1>Chinese Food</h1>
+                <h1>Tarot</h1>
+                <h1>Outdoors</h1>
+            </div> */}
         </div>
     )
 }

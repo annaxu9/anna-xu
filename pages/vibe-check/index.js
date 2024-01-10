@@ -3,6 +3,7 @@ import SpotifySearch from "../../components/Vibe-Check/SpotifySearch";
 import { AuthProvider } from '../../contexts/AuthContext'
 import { searchSpotify } from "../../utils/spotify";
 import SearchResults from "../../components/Vibe-Check/SearchResults";
+import Link from "next/link";
 
 export default function VibeCheck() {
   const [token, setToken] = useState('');
@@ -66,8 +67,11 @@ export default function VibeCheck() {
           <SpotifySearch searchTerm={searchTerm} onSearchChange={setSearchTerm} onSearchSubmit={handleSearch} setIsSearchFocused={setIsSearchFocused}/>
           <SearchResults results={results} isSearchFocused={isSearchFocused}/>
         </div>
-
       )}
+      <div className="text-right mt-4 w-3/4 mx-auto">
+        <h1 className="text-center italic">⚠️Important Disclaimer: this app is currently seeking the approval of Spotify to be public, so it won&apos;t work without your email in my system. Email anna.xu@yale.edu if you want to use this!⚠️</h1>
+        <Link className="bg-melrose text-white" href="/about-vibe-check">About Vibe Check</Link>
+      </div>
     </AuthProvider>
   );
 }

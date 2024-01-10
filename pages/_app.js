@@ -1,12 +1,13 @@
 import '../styles/globals.css'
-import NavBar from '../components/NavBar/NavBar'
+import NavBar2 from '../components/NavBar/NavBar2'
 import { AuthProvider } from '../contexts/AuthContext'
 
 function MyApp({ Component, pageProps }) {
   return (
       <AuthProvider>
-        <NavBar />
-        <Component {...pageProps} />     
+        <NavBar2 />
+        <div className="mt-24"></div>
+        <Component {...pageProps}/>     
       </AuthProvider>
 
   )
