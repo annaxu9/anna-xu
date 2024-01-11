@@ -62,7 +62,7 @@ export default function ArtPortfolio() {
                         {/* Create rows for every two paintings */}
                         {paintings.map((painting, index) => (
                             index % 2 === 0 && (
-                                <div className="flex flex-col sm:flex-row justify-center items-center">
+                                <div className="flex flex-col sm:flex-row justify-center items-center" key={index}>
                                     <ArtImage className="w-full sm:w-1/2" key={index} img={paintings[index]} />
                                     {paintings[index + 1] && (
                                         <ArtImage className="w-full sm:w-1/2" key={index + 1} img={paintings[index + 1]} />
@@ -82,7 +82,7 @@ export default function ArtPortfolio() {
                         {/* Create rows for every two prints */}
                         {prints.map((print, index) => (
                             index % 2 === 0 && (
-                                <div className="flex flex-col sm:flex-row justify-center items-center">
+                                <div className="flex flex-col sm:flex-row justify-center items-center" key={index}>
                                     <ArtImage className="w-full sm:w-1/2" key={index} img={prints[index]} />
                                     {prints[index + 1] && (
                                         <ArtImage className="w-full sm:w-1/2" key={index + 1} img={prints[index + 1]} />
@@ -102,7 +102,7 @@ export default function ArtPortfolio() {
                         {/* Create rows for every two multimedia */}
                         {multimedia.map((mult, index) => (
                             index % 2 === 0 && (
-                                <div className="flex flex-col sm:flex-row justify-center items-center">
+                                <div className="flex flex-col sm:flex-row justify-center items-center" key={index}>
                                     <ArtImage className="w-full sm:w-1/2" key={index} img={multimedia[index]} />
                                     {multimedia[index + 1] && (
                                         <ArtImage className="w-full sm:w-1/2" key={index + 1} img={multimedia[index + 1]} />
@@ -122,7 +122,7 @@ export default function ArtPortfolio() {
                         {/* Create rows for every two pastel */}
                         {pastel.map((past, index) => (
                             index % 2 === 0 && (
-                                <div className="flex flex-col sm:flex-row justify-center items-center">
+                                <div className="flex flex-col sm:flex-row justify-center items-center" key={index}>
                                     <ArtImage className="w-full sm:w-1/2" key={index} img={pastel[index]} />
                                     {pastel[index + 1] && (
                                         <ArtImage className="w-full sm:w-1/2" key={index + 1} img={pastel[index + 1]} />
