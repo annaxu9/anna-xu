@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 export default function Skills() {
     const [skills, setSkills] = useState([]);
     const [filteredSkills, setFilteredSkills] = useState(skills);
-    const [color, setColor] = useState("#FFE0BC");
+    const [color, setColor] = useState("#F8C9DA");
     const [selectedSkillIndex, setSelectedSkillIndex] = useState(null);
     const [hoverIndex, setHoverIndex] = useState(null);
 
-    const categories = [["All", "#FFE0BC"], ["Frontend", "#DDF3BA"], ["Backend", "#F5BEBE"], ["Database", "#BADEF3"], ["Systems Programming", "#F5ECBE"], ["Source Control", "#B3E8C8"], ["Graphic Design", "#C8C7F8"], ["Art", "#FBC1F6"]];
+    const categories = [["All", "#F8C9DA"], ["Frontend", "#E7F3BA"], ["Backend", "#F5BEBE"], ["Database", "#BADEF3"], ["Systems Programming", "#F5ECBE"], ["Source Control", "#B3E8C8"], ["Graphic Design", "#C8C7F8"], ["Art", "#FBC1F6"], ["Journalism", "#D5F5C1"], ["Soft Skills", "#FFE0BC"], ["Other", "#D7F4FA"]];
     const levelDescriptions = {
         1: "Just Beginning to Learn",
         2: "Somewhat Comfortable",
@@ -58,7 +58,7 @@ export default function Skills() {
             <p className=" p-2 m-2 bg-lightgray">
             On a good day, coding can be a fun, invigorating puzzle. On a bad day, coding can make you want to commit violence against the most expensive thing you own. As someone who didn&apos;t really code before college, I found myself often fighting an uphill battle.
 
-            That&apos;s why, before my senior year, I took a gap semester. While I taught CS50 and had extracurricular commitments, without classes I was able to carve out the space to finally fill my conceptual holes, practice without much stress, and explore. I&apos;m proud to share that when I used to feel apprehension at the thought of opening VSCode, I now engage with the application spontaneously and many times even eagerly. Below you can take a look at my skills!
+            That&apos;s why, before my senior year, I took a gap semester. While I taught CS50 and had extracurricular commitments, without classes I was able to carve out the space to finally fill my conceptual holes, practice without much stress, and explore. With a background in journalism, I used an investigative approach to learning the fundamental web development concepts—always asking questions and never giving up. I&apos;m proud to share that when I used to feel apprehension at the thought of opening VSCode, I now engage with the application spontaneously and many times even eagerly. Below you can take a look at my skills!
             </p>
 
             <h1 className="text-center">Anna&apos;s Skills</h1>
@@ -77,6 +77,8 @@ export default function Skills() {
 
             </div>
 
+            <h1 className=" sm:hidden text-center">Click on the skill to read my notes!</h1>
+
             <div className="md:w-4/5 mx-auto mb-5">
                 <div className="flex flex-col">
                     {filteredSkills.map((skill, index) => {
@@ -91,7 +93,7 @@ export default function Skills() {
                                     
                                 >
                                     <h1 className="font-bold">{skill.name}</h1>
-                                    <h1 className="italic">{levelDescriptions[skill.level]}</h1>
+                                    <h1 className="italic text-right">{levelDescriptions[skill.level]}</h1>
                                 </div>
                                 {selectedSkillIndex === index && <p className="mt-2 text-gray-600 text-sm">{skill.note}</p>}
                             </div>

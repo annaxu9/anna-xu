@@ -73,6 +73,12 @@ a {
   100% {font-size: 17px;}
 }
 
+.hover-effect:hover {
+  transform: scale(1.1); /* This makes the link slightly larger when hovered */
+  transition: transform 0.2s; /* This adds a smooth transition effect */
+  cursor: pointer; /* Changes the cursor to indicate it's clickable */
+}
+
 .wobble-text {
   animation: wobble 5s ease-in-out infinite;
 }
@@ -173,6 +179,25 @@ a {
   0% { background-position: 0 0 }
   100% { background-position: -500px 0 }
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-background {
+  background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #ffdde1, #fcb69f);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
 
 @tailwind base;
 @tailwind components;

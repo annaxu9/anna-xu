@@ -35,6 +35,7 @@ export default function Experience() {
                 <a className="text-blue-600 dark:text-blue-500 hover:underline" href="https://www.edx.org/cs50" target="_blank">CS50</a>
                 &nbsp;is a famous introductory computer science course.
             </p>
+            <div>
                 <ul className="list-disc ml-12">
                     <li>Led two weekly 2-hour Discussion Sections, conducted grading, and hosted Office Hours to support 56 students (and dozens more outside of my section) in mastering C, Python, SQL, HTML, CSS, and JavaScript. This eventually guided students in the creation of complex three-tier web applications.</li>
                     <li>Facilitated Walkthroughs and one-on-one Office Hours to enhance student understanding and problem-solving skills.</li>
@@ -52,7 +53,7 @@ export default function Experience() {
                     <li>Allows scientists to upload their own CSV data for data analysis and visualization.</li>
                     <li>Participated in workshops on scientific writing, career building, and ethics.</li>
                 </ul>
-
+            </div>
 
         </div>
     )

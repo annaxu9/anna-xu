@@ -93,6 +93,11 @@ export default function NavBar() {
                                         </Link>
                                     </li>
                                     <li>
+                                        <Link href="/art-portfolio" className="z-100 p-1 rounded" onClick={toggleDropdown}>
+                                            art
+                                        </Link>
+                                    </li>
+                                    <li>
                                         <Link href="/about" className="z-100 p-1 rounded" onClick={toggleDropdown}>
                                             about
                                         </Link>
