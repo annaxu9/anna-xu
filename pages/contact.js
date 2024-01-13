@@ -4,7 +4,7 @@ export default function Contact() {
     return (
         <div className="w-11/12 mx-auto">
             <h1 className="text-center">Contact Me!</h1>
-            <h1 className="text-center m-4">Currently actively looking for summer internships for Software Engineering Opportunities and/or research opportunities in Human Computer Interaction.</h1>
+            <h1 className="text-center m-4">Currently actively looking for summer internships for software engineering and/or research opportunities in Human Computer Interaction.</h1>
             <div className="p-2 m-2 flex items-center justify-center">
                 <div className="flex flex-col items-center justify-center">
                     <h2 className="text-center">Email</h2>
