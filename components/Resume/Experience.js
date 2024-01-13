@@ -49,7 +49,7 @@ export default function Experience() {
                             <li>Presented my project in front of the URBN Board of Directors, managers, and fellow interns.</li>
                         </ul>
                         <li>Led Design for Team S-AI-ze Em&apos; at URBN&apos;s annual Hackathon.</li>
-                        <ul className="bullet ml-10 mb-5 mr-4">
+                        <ul className="bullet ml-6 mb-5 mr-4">
                             <li>Won 3rd place in the Hackathon.</li>
                             <li>Presented to the URBN Board of Directors and secured funding for future development for the feature that uses an AI model to suggest size to users for products based on the user’s photo and past reviews from other users.</li>
                             <li>Utilized Figma to generate mockups for the sizing feature.</li>
