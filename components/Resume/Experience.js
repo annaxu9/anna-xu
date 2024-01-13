@@ -65,7 +65,7 @@ export default function Experience() {
                 <img src="/resume-images/duck.png" className="w-12 h-12 mt-3"/>
                 <div>
                     <h3 className="font-bold mt-4">Yale CS50 Head TA / TA</h3>
-                    <h3>New Haven, CT (April 2022–present)</h3>
+                    <h3>New Haven, CT (April 2022–December 2023)</h3>
                 </div>
 
             </div>
