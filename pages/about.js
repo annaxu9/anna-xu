@@ -9,7 +9,7 @@ export default function AboutMe() {
                     <div className="p-2  h-auto border-dashed border-yale border-2"> 
                         <div className="p-2  h-auto flex flex-col items-center">
                             <Image 
-                                src="/about-images/matcha-me.png"
+                                src="/about-images/hawaii.jpeg"
                                 width={150}
                                 height={150}
                                 layout="responsive"
