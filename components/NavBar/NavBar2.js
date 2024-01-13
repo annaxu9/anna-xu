@@ -102,6 +102,11 @@ export default function NavBar() {
                                             about
                                         </Link>
                                     </li>
+                                    <li>
+                                        <Link href="/contact" className="z-100 p-1 rounded" onClick={toggleDropdown}>
+                                            contact
+                                        </Link>
+                                    </li>
                                 </ul>
                             )}
                         </li>
