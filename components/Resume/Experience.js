@@ -41,7 +41,7 @@ export default function Experience() {
                         <li>Completed multiple tickets, modifying numerous files and hundreds of lines of code that went into production code.</li>
                         <li>Converted JavaScript files into TypeScript including creating new Vue Store Interfaces resulting in enhanced code quality, maintainability, and developer productivity.</li>
                         <li>Led the planning and development of The Internship Showcase Site.</li>
-                        <ul className="bullet ml-12 mr-4">
+                        <ul className="bullet ml-6 mr-4">
                             <li>Utilized Vue.js, Nuxt.js, and TailwindCSS to create a user-friendly platform based on markdown file-based blogs.</li>
                             <li>Collaborated closely with the URBN Talent and Communications team to ensure alignment with the organization&apos;s recruiting goals. The portal is currently in the final stages of review and will go live shortly.</li>
                             <li>Took ownership of data collection by designing and conducting surveys among the interns.</li>

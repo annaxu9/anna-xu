@@ -199,13 +199,13 @@ a {
 }
 
 .content {
-  max-height: 1000px; /* Adjust this value to be larger than your content */
+  max-height: 1500px; /* Adjust this value to be larger than your content */
   overflow: hidden;
   transition: max-height 2s ease-in-out; /* Transition only max-height */
 }
 
 .content.show {
-  max-height: 1000px; /* Keep it at the same value */
+  max-height: 1500px; /* Keep it at the same value */
 }
 
 .content.hide {
