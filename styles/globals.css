@@ -205,7 +205,7 @@ a {
 }
 
 .content.show {
-  max-height: 1500px; /* Keep it at the same value */
+  max-height: 2000px; /* Keep it at the same value */
 }
 
 .content.hide {
