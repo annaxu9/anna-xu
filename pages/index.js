@@ -16,6 +16,7 @@ export default function Home() {
                 src="/home-images/me.jpeg"
                 width={500}
                 height={500}
+                priority="high"
               />
             </div>
           </div>
@@ -28,14 +29,14 @@ export default function Home() {
       <div className="py-5">
         <div className="w-3/4 mx-auto p-5">
           <h1 className="mb-4 text-center"></h1>
-          <p className=""><span className="css-rainbow-text grow-on-hover">Creative</span>, collaborative, and goal-oriented student working toward a career in software engineering, with a keen interest in advancing research in Human-Computer Interaction, to create platforms that are user friendly, well-designed, and <span className="font-bold grow-on-hover ">impact society positively</span>. Anna is qualified by her years of coding experience, her number of quality projects, and through teaching others how to code.</p>
+          <p className=""><span className="css-rainbow-text grow-on-hover">Creative</span>, collaborative, and goal-oriented student working toward a career in software engineering, with a keen interest in advancing research in <span className="font-bold grow-on-hover ">Human-Computer Interaction</span>, to create platforms that are user friendly, well-designed, and <span className="font-bold grow-on-hover ">impact society positively</span>. Anna is qualified by her years of coding experience, her number of quality projects, and through teaching others how to code.</p>
         </div>
       </div>
       <div className="flex justify-center mb-10">
         <div className="flex flex-col">
         <Link className="m-2 hover-effect" href="/skills">⭑ Check out my skills</Link>
-        <Link className="m-2 hover-effect" href="/resume">⭑ See my resume </Link>
-        <Link className="m-2 hover-effect" href="/about">⭑ Learn about my interests</Link>
+        <Link className="m-2 hover-effect" href="/resume">⭑ Check out my resume</Link>
+        <Link className="m-2 hover-effect" href="/art-portfolio">⭑ Check out my art portfolio</Link>
         </div>
       </div>
 

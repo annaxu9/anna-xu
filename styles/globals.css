@@ -198,6 +198,21 @@ a {
   animation: gradientAnimation 15s ease infinite;
 }
 
+.content {
+  max-height: 1000px; /* Adjust this value to be larger than your content */
+  overflow: hidden;
+  transition: max-height 2s ease-in-out; /* Transition only max-height */
+}
+
+.content.show {
+  max-height: 1000px; /* Keep it at the same value */
+}
+
+.content.hide {
+  max-height: 0; /* Collapse by setting max-height to 0 */
+}
+
+
 
 @tailwind base;
 @tailwind components;

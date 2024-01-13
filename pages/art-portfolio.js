@@ -1,5 +1,6 @@
 import { useState } from "react"
 import ArtImage from "../components/Art/ArtImage"
+import Carousel from "../components/Art/Carousel"
 
 export default function ArtPortfolio() {
     const filters = [
@@ -63,7 +64,7 @@ export default function ArtPortfolio() {
                         {paintings.map((painting, index) => (
                             index % 2 === 0 && (
                                 <div className="flex flex-col sm:flex-row justify-center items-center" key={index}>
-                                    <ArtImage className="w-full sm:w-1/2" key={index} img={paintings[index]} />
+                                    <ArtImage className="w-full sm:w-1/2" key={index} img={paintings[index]}  priority="high"/>
                                     {paintings[index + 1] && (
                                         <ArtImage className="w-full sm:w-1/2" key={index + 1} img={paintings[index + 1]} />
                                     )}
@@ -90,6 +91,11 @@ export default function ArtPortfolio() {
                                 </div>
                             )
                         ))}
+                        <div className="p-2 bg-melrose100">
+                            <Carousel images={shrimp_girls}/>
+                            <p className="italic text-center">Some shrimp girls I made inspired by <a href="https://www.imdb.com/name/nm4680793/" target="_blank" className="underline">Rina Sawayama</a></p>
+                        </div>
+                        
                     </div>
                 ) : null
             }

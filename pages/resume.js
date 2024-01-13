@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Experience from '../components/Resume/Experience';
+import Link from 'next/link';
 
 export default function Resume() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -22,8 +23,8 @@ export default function Resume() {
 
     return (
         <div className="w-4/5 mx-auto">
-            <h1 className={`transition-colors duration-500 bavista ${isScrolled ? 'text-white' : 'text-melrose'}`}>Oh hi<span className="nervada">!</span> we<span className="nervada">l</span>come<span className="nervada">!</span></h1>
-            <p>i hope you this gives 👩🏻‍💻 📖 🧠 💻</p>
+            <h1 className={`transition-colors duration-500 bavista ${isScrolled ? 'text-white' : 'text-melrose'}`}>Oh hi<span className="nervada">!</span> we<span className="nervada">l</span>come<span className="nervada">!</span><span className='not-italic text-3xl'> 👩🏻‍💻 📖 🧠 💻</span></h1>
+            <p className='text-center'></p>
             <hr className='mb-8'></hr>
             <div className="">
                 <h1 className="text-center bavista2">Education</h1>
@@ -69,6 +70,16 @@ export default function Resume() {
                 <Skills /> */}
                 <h1 className="text-center bavista2">Experience </h1>
                 <Experience />
+                <h1 className="text-center bavista2 mt-5">Projects</h1>
+                <h1 className='font-bold'>Co-creator of YIMS, an iPhone and Android compatible app for Yale Intramural sports</h1>
+                <ul className='ml-12 list-disc'>
+                    <li>I created all wireframes in Figma, implemented screens using React Native, connected frontend to application tier using Flask and Fetch API, and contributed to backend database design through discussions with IM Managers.</li>
+                    <li>Every year Yale’s 14 college compete in Intramural (IM) sports for the Tyng Cup. Still, there is no easy way to access and view the college standings and schedule for IM sports making it so that less students participate in this fun and awesome competition. We created YIMS to solve this problem!</li>
+                    <li>Below is a demo where we walk through the login process, leaderboard page, how IM Managers can schedule and score games, and how students can add games to their calendar and view past game records.</li>
+                </ul>
+                <video controls width="100%" className="mx-auto m-4" style={{maxWidth: "500px"}} src="/demos/yims.mp4"></video>
+                <Link className='font-bold' href="/vibe-check">Creater of <span className='css-rainbow-text'>vibe check</span></Link>
+                
                 {/* <h1 className="text-center bavista2">Projects </h1>
                 <h1 className="text-center bavista2">Extracurricu<span className="nervada2">l</span>ars</h1>
                 <h1 className='text-center'>Other interests and hobbies covered in About Me</h1> */}

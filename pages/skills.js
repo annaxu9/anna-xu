@@ -54,12 +54,6 @@ export default function Skills() {
   
     return (
         <div className="w-11/12 mx-auto">
-            <h1 className="text-center">My Web Development Journey</h1>
-            <p className=" p-2 m-2 bg-lightgray">
-            On a good day, coding can be a fun, invigorating puzzle. On a bad day, coding can make you want to commit violence against the most expensive thing you own. As someone who didn&apos;t really code before college, I found myself often fighting an uphill battle.
-
-            That&apos;s why, before my senior year, I took a gap semester. While I taught CS50 and had extracurricular commitments, without classes I was able to carve out the space to finally fill my conceptual holes, practice without much stress, and explore. With a background in journalism, I used an investigative approach to learning the fundamental web development concepts—always asking questions and never giving up. I&apos;m proud to share that when I used to feel apprehension at the thought of opening VSCode, I now engage with the application spontaneously and many times even eagerly. Below you can take a look at my skills!
-            </p>
 
             <h1 className="text-center">Anna&apos;s Skills</h1>
 

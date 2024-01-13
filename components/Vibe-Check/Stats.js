@@ -1,5 +1,5 @@
 import ProgressBar from "./ProgressBar"
-import StatHover from "./StatHover"
+import StatHover from "./StatHover";
 
 export default function Stats({acousticness, danceability, energy, tempo, valence, speechiness}) {
 
