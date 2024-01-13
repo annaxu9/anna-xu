@@ -79,7 +79,12 @@ export default function Resume() {
                 </ul>
                 <video controls width="100%" className="mx-auto m-4" style={{maxWidth: "500px"}} src="/demos/yims.mp4"></video>
                 <Link className='font-bold' href="/vibe-check">Creater of <span className='css-rainbow-text'>vibe check</span></Link>
-                
+                <ul className='ml-12 list-disc'>
+                    <li>I created vibe check, a web application that uses the Spotify API to search for songs/artists and display their data. I also accessed and displayed each song's vibe based off some observations I made about the song.</li>
+                    <li>I leveraged Next.js' Pages API to streamline fetch calls and seamlessly handle Spotify authentication and routing within my web application. The frontend work was done using React and Tailwind.</li>
+                    <li>Below is a demo! And read more about vibe check <Link href="/about-vibe-check" className='underline'>here.</Link></li>
+                </ul>
+                <video controls width="100%" className="mx-auto m-4 mb-10" style={{maxWidth: "500px"}} src="/demos/vibe-check.mp4"></video>
                 {/* <h1 className="text-center bavista2">Projects </h1>
                 <h1 className="text-center bavista2">Extracurricu<span className="nervada2">l</span>ars</h1>
                 <h1 className='text-center'>Other interests and hobbies covered in About Me</h1> */}
