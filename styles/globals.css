@@ -1,22 +1,28 @@
+/* application wide styles */
+
 html,
 body {
   font-family: 'DM Sans', sans-serif;
   background-color: white;
 }
 
+/* take the underline off links */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* change the style of lists */
 .bullet {
   list-style-type: circle;
 }
 
+/* i'm not really sure what this does but apparently something changes how the size of a box is calculated to include paddings as well */
 * {
   box-sizing: border-box;
 }
 
+/* special fonts (you have to use a combination of these because some letters of bavista are weird */
 .nervada {
   font-family: 'Nervada', sans-serif;
   font-style: italic;
@@ -53,12 +59,16 @@ a {
   url('../public/fonts/bavista-soulare/Bavista_Soulare.woff2') format('woff2');
 }
 
-@keyframes animatedBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* rainbow text! */
+.css-rainbow-text {
+  background: linear-gradient(90deg, #f00, #ff2b00, #f50, #ff8000, #fa0, #fa0, #00d4ff, #0af, #007fff, #05f, #002bff, #00f, #2a00ff, #50f, #7f00ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+  color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
+
+/* fun interaction to make text bigger (home page)*/
 .grow-on-hover {
   animation: grow-shrink 10s linear infinite paused;
 }
@@ -73,12 +83,14 @@ a {
   100% {font-size: 17px;}
 }
 
+/* fun interaction to make text slightly bigger (home page) */
 .hover-effect:hover {
   transform: scale(1.1); /* This makes the link slightly larger when hovered */
   transition: transform 0.2s; /* This adds a smooth transition effect */
   cursor: pointer; /* Changes the cursor to indicate it's clickable */
 }
 
+/* fun interaction to make text wobble (home page) */
 .wobble-text {
   animation: wobble 5s ease-in-out infinite;
 }
@@ -89,9 +101,7 @@ a {
   25% { transform: rotate(5deg); }
 }
 
-
-
-
+/* background on the home page */
 .sine-wave-background {
   width: 100%; /* Adjust width as needed */
   height: 200px; /* Adjust height as needed */
@@ -100,6 +110,7 @@ a {
   background-repeat: no-repeat;
 }
 
+/* background not used currently */
 .wave-background {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath fill='%233E3E3E' d='M0,30 C60,90 50,120 60,150 C150,200 90,110 250,150 C550,100 250,120 300,150 C350,180 350,120 200,150 C450,180 450,120 500,150 C550,180 550,120 600,150 C650,150 950,120 700,150 C50,350 0,120 330,450 C50,180 850,160 00,150 C950,10 550,120 6000, 710 L900,300 L0,100 Z' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -107,19 +118,14 @@ a {
   background-position: center;
 }
 
-.css-rainbow-text {
-  background: linear-gradient(90deg, #f00, #ff2b00, #f50, #ff8000, #fa0, #fa0, #00d4ff, #0af, #007fff, #05f, #002bff, #00f, #2a00ff, #50f, #7f00ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
-  color: #0000;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
+/* standardized images on the home page */
 .image {
   width: 100px;
   height: 100px;
   object-fit: contain;
 }
 
+/* home page pictures */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Creates 4 columns with equal width */
@@ -165,6 +171,7 @@ a {
   animation: fadeInOut 6s ease forwards;
 }
 
+/* vibe check animated rainbow text */
 .animated_rainbow_1 {
   font-size: 42px;
   font-weight: 600;
@@ -180,6 +187,13 @@ a {
   100% { background-position: -500px 0 }
 }
 
+/* art portfolio button gradients */
+.gradient-background {
+  background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #ffdde1, #fcb69f);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -192,12 +206,7 @@ a {
   }
 }
 
-.gradient-background {
-  background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #ffdde1, #fcb69f);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-}
-
+/* resume page how to show and hide content */
 .content {
   max-height: 3000px; /* Adjust this value to be larger than your content */
   overflow: hidden;
@@ -212,6 +221,26 @@ a {
   max-height: 0; /* Collapse by setting max-height to 0 */
 }
 
+/* monet page specific */
+.water-lily-bg {
+  background-image: url('/water-lilies/fav.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* inspire page specific */
+
+.art-board {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.display-area {
+  margin-top: 20px;
+  font-size: 24px;
+  font-family: 'Brush Script MT', cursive;
+  color: #6a1b9a;
+}
 
 
 @tailwind base;

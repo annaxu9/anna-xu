@@ -92,11 +92,11 @@ export default function NavBar() {
                                             art
                                         </Link>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <Link href="/colors" className="z-100 p-1 rounded" onClick={toggleDropdown}>
                                             colors
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <Link href="/contact" className="z-100 p-1 rounded" onClick={toggleDropdown}>
                                             contact
