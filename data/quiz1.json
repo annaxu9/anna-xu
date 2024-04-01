@@ -1,0 +1,46 @@
+{
+    "title": "Quiz on the Executive Branch of the U.S. Government",
+    "questions": [
+      {
+        "question": "Who is the head of the executive branch?",
+        "options": ["President", "Vice President", "Secretary of State", "Attorney General"],
+        "answer": "President"
+      },
+      {
+        "question": "What is the role of the Vice President?",
+        "options": ["Head of the Senate", "Chief of Staff", "Head of the House of Representatives", "National Security Advisor"],
+        "answer": "Head of the Senate"
+      },
+      {
+        "question": "Which department is responsible for the nation's foreign policy?",
+        "options": ["Department of Defense", "Department of Justice", "Department of State", "Department of the Interior"],
+        "answer": "Department of State"
+      },
+      {
+        "question": "Who is responsible for developing and executing the federal budget?",
+        "options": ["Secretary of the Treasury", "Director of the Office of Management and Budget", "Secretary of Commerce", "White House Chief of Staff"],
+        "answer": "Director of the Office of Management and Budget"
+      },
+      {
+        "question": "Which position is the chief advisor to the President on national security issues?",
+        "options": ["National Security Advisor", "Secretary of Defense", "Director of the CIA", "Attorney General"],
+        "answer": "National Security Advisor"
+      },
+      {
+        "question": "Who represents the United States at the United Nations?",
+        "options": ["Secretary of State", "Ambassador to the United Nations", "Vice President", "National Security Advisor"],
+        "answer": "Ambassador to the United Nations"
+      },
+      {
+        "question": "Which agency is responsible for enforcing environmental laws and regulations?",
+        "options": ["Environmental Protection Agency", "Department of Energy", "National Park Service", "Federal Emergency Management Agency"],
+        "answer": "Environmental Protection Agency"
+      },
+      {
+        "question": "What is the primary role of the Small Business Administration (SBA)?",
+        "options": ["Regulating interstate commerce", "Providing support to small businesses", "Managing federal budget", "Overseeing national security"],
+        "answer": "Providing support to small businesses"
+      }
+    ]
+  }
+  
