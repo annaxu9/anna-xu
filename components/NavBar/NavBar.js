@@ -12,33 +12,19 @@ export default function NavBar() {
     const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
     return (
-        <div className="flex justify-center mb-4 fixed top-0 left-0 w-full bg-white z-50 pb-5">
+        <div className="flex justify-center mb-3 fixed top-0 left-0 w-full bg-white z-50 pb-2">
             <nav className="w-full sm:w-5/6">
                 <div className="flex justify-between items-center p-1 mt-5 rounded">
                     {/* Left Side */}
                     <div className="flex-grow pl-2">
-                        {/* This will be visible on small screens and hidden on medium screens and larger */}
-                        <div className="sm:hidden">
-                            {currentPath == "/" ?
-                            <Link href="/" >
-                                ANNA XU
-                            </Link>
-                            :
-                            <Link href="/" className=" text-black">
-                                ANNA XU
-                            </Link>   
-                            }
-                        </div>
-                        
-                        {/* This will be hidden on small screens and visible on medium screens and larger */}
-                        <div className="hidden sm:block">
+                        <div>
                             {currentPath == "/" ?
                             <Link href="/" className="z-100 text-melrose">
-                                ☺️ ANNA XU ☺️
+                            anna xu
                             </Link>
                             :
                             <Link href="/" className="z-100 text-black">
-                                ☺️ ANNA XU ☺️
+                            anna xu
                             </Link>   
                             }
                         </div>

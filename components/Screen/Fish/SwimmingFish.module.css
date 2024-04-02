@@ -8,14 +8,14 @@
       opacity: 1;
     }
     100% { 
-      transform: translateX(105vw); /* Move off-screen right */
+      transform: translateX(100vw); /* Move off-screen right */
       opacity: 0;
     }
   }
   
   @keyframes swimLeft {
     0% { 
-      transform: translateX(105vw); /* Start off-screen right */
+      transform: translateX(100vw); /* Start off-screen right */
       opacity: 0;
     }
     5%, 95% {
