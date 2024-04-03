@@ -82,11 +82,12 @@ function Journal() {
             setEntries(entries.filter(entry => entry.id !== id));
         }
     };
-
+    
     function formatDate(dateString) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const options = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
         return new Date(dateString).toLocaleDateString('en-US', options);
     }
+    
     
     // Group entries by date
     const groupedEntries = entries.reduce((acc, entry) => {
