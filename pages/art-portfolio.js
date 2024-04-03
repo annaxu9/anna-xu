@@ -18,7 +18,7 @@ export default function ArtPortfolio() {
 
     const prints = [
         ["/art-portfolio/printmaking-final.jpg", "This was my final project for Printmaking. I layered woodblocks to create this. While based on water, I wanted to create a more vibrant and abstract design."],
-        ["/art-portfolio/canada-etching.jpg", "This was an etching I did based off a scene in Banff National Park in Canada. I defintely did not do its beauty justice."], 
+        ["/art-portfolio/canada-etching.jpg", "This was an etching I did based off a scene in Banff National Park in Canada."], 
         ["/art-portfolio/monotype-print.jpg", "A little monotype fashion icon."],
         ["/art-portfolio/woodblock-abstract.jpg", "Abstract Woodblock Print"],
         ["/art-portfolio/etching-road.jpeg", "A rainy, dark day on Whitney Avenue."],
