@@ -43,13 +43,15 @@ function Journal() {
             alert('Incorrect PIN. Please try again.');
             return;
         }
+        const dateInUTC = new Date(date + 'T00:00:00').toISOString().slice(0, 10);
+
         const response = await fetch('/api/journal', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                entry_date: date, // Current date in YYYY-MM-DD format
+                entry_date: dateInUTC, // Current date in YYYY-MM-DD format
                 entry_text: entryText,
                 privacy: privacy,
             }),
@@ -101,7 +103,8 @@ function Journal() {
 
 // The updateEntry function
 const updateEntry = async (id, newDate, newText) => {
-    console.log("newText", newText);
+    const dateInUTC = new Date(newDate + 'T00:00:00').toISOString().slice(0, 10);
+
     if (userPin !== correctPin) {
         alert('Incorrect PIN. Please try again.');
         return false; // Indicate that the update was not successful
@@ -113,7 +116,7 @@ const updateEntry = async (id, newDate, newText) => {
         },
         body: JSON.stringify({
             id: id,
-            entry_date: newDate,
+            entry_date: dateInUTC,
             entry_text: newText,
         }),
     });
