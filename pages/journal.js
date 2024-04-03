@@ -82,7 +82,7 @@ function Journal() {
             setEntries(entries.filter(entry => entry.id !== id));
         }
     };
-    
+
     function formatDate(dateString) {
         const options = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
         return new Date(dateString).toLocaleDateString('en-US', options);
@@ -227,10 +227,10 @@ const updateEntry = async (id, newDate, newText) => {
             <div>
                 {Object.entries(groupedEntries).map(([date, entries]) => (
                     <div key={date} className="mb-4">
+                        <h2 className="text-lg font-bold text-center">{formatDate(date)}</h2>
                         <ul className="list-none p-0">
                             {entries.map((entry) => (
-                                <li key={entry.id} className=" mb-2 pb-2 gap-2">
-                                    <h2 className="text-lg font-bold text-center">{formatDate(entry.entry_date)}</h2>
+                                <li key={entry.id} className="mb-2 pb-2 gap-2">
                                     <div className='flex gap-4'>
                                         <button onClick={() => deleteEntry(entry.id)}>•</button>
                                         <button className="text-left" onClick={() => handleEditClick(entry)}>{entry.entry_text}</button>
