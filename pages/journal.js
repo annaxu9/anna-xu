@@ -223,12 +223,14 @@ const updateEntry = async (id, newDate, newText) => {
             <div>
                 {Object.entries(groupedEntries).map(([date, entries]) => (
                     <div key={date} className="mb-4">
-                        <h2 className="text-lg font-bold text-center">{formatDate(date)}</h2>
                         <ul className="list-none p-0">
                             {entries.map((entry) => (
-                                <li key={entry.id} className="flex mb-2 pb-2 gap-2">
-                                    <button onClick={() => deleteEntry(entry.id)}>•</button>
-                                    <button className="text-left" onClick={() => handleEditClick(entry)}>{entry.entry_text}</button>
+                                <li key={entry.id} className=" mb-2 pb-2 gap-2">
+                                    <h2 className="text-lg font-bold text-center">{formatDate(entry.entry_date)}</h2>
+                                    <div className='flex'>
+                                        <button onClick={() => deleteEntry(entry.id)}>•</button>
+                                        <button className="text-left" onClick={() => handleEditClick(entry)}>{entry.entry_text}</button>
+                                    </div>
                                 </li>
                             ))}
                         </ul>
