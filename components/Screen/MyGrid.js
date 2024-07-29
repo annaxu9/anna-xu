@@ -16,6 +16,7 @@ const gridImages = [
     "/home-images/saggitarius.png", "/home-images/spotify.png", "/home-images/strawberry-lemonade.png",
     "/home-images/vaseline.png", "/home-images/volleyball.png", "/home-images/yale.png", 
     "/home-images/webdev.png", "/home-images/bike.png", "/home-images/peanut-butter.png",
+    "/home-images/chappell-roan.png", "/home-images/cmu.png", "/home-images/hcii.png"
   ];
 
 
