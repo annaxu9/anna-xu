@@ -16,7 +16,6 @@ export default function ArtistPictures({artists}) {
                                             width={120} 
                                             height={120}
                                             objectFit="cover"
-                                            className="rounded-full"
                                         />
                                     </div>
                                 ) : (
