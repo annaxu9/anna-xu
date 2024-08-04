@@ -49,7 +49,7 @@ export default function SearchResults({results, isSearchFocused}) {
       }, [selectedItem]);
 
       return (
-        <div id="results" className="absolute top-full w-4/5 mt-1 bg-white  border-white-300 rounded-md shadow-lg max-h-60 overflow-y-auto z-10">
+        <div id="results" className="absolute top-full w-4/5 mt-1 bg-white  border-white-300 rounded-md shadow-lg max-h-60 z-10">
             {results.map((track, index) => (
             <p 
                 key={track.id} 

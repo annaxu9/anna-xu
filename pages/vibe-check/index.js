@@ -69,6 +69,7 @@ export default function VibeCheck() {
         </div>
       )}
       <div className="text-right mt-4 w-3/4 mx-auto">
+        
         {/* <h1 className="text-center italic">⚠️Important Disclaimer: this app is currently seeking the approval of Spotify to be public, so it won&apos;t work without your email in my system. Email anna.xu@yale.edu if you want to use this!⚠️</h1> */}
         <Link className="bg-melrose text-white" href="/about-vibe-check">About Vibe Check</Link>
       </div>
