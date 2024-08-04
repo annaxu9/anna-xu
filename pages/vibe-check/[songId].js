@@ -57,6 +57,7 @@ const SongDetails = () => {
                             speechiness={audioFeatures.speechiness}
                             valence={audioFeatures.valence}
                         />
+                        
                     </div>
                 </div>
             }
