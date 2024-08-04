@@ -29,45 +29,43 @@ const SongDetails = () => {
         <div className='w-4/5 items-center mx-auto'>
             <iframe className='w-full mt-9' src={spotify_link} width="200" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             { loading ? <p className='text-center'>Loading...</p> :
-                <div>
-                    <Image 
-                        src="/icons/spotify.png"
-                        width={100}
-                        height={100}
-                        alt="spotify logo"
-                    />
+                <div className='bg-black p-3 sm:p-9 w-full'>
+                    <div className='bg-white p-5'>
+                            <Image 
+                            src="/icons/spotify.png"
+                            width={100}
+                            height={100}
+                            alt="spotify logo"
+                            className="ml-auto"
+                        />
+                        <TitleName 
+                            name={trackDetails.name}
+                            url={trackDetails.external_urls.spotify}
+                        />
+                        <ArtistPictures artists={artistsDetails}/>
+                        <MainStats 
+                            duration={trackDetails.duration_ms} 
+                            date={trackDetails.album.release_date} 
+                            popularity={trackDetails.popularity}
+                        />
+                        <Genres artists={artistsDetails}/>
+                        <Vibes 
+                            acousticness={audioFeatures.acousticness}
+                            danceability={audioFeatures.danceability}
+                            energy={audioFeatures.energy}
+                            speechiness={audioFeatures.speechiness}
+                            valence={audioFeatures.valence}
+                            index={audioFeatures.key}
+                        />
+                        <Stats 
+                            acousticness={audioFeatures.acousticness}
+                            danceability={audioFeatures.danceability}
+                            energy={audioFeatures.energy}
+                            tempo={audioFeatures.tempo}
+                            speechiness={audioFeatures.speechiness}
+                            valence={audioFeatures.valence}
+                        />
 
-                    <div className='bg-black p-3 sm:p-9 w-full'>
-                        <div className='bg-white p-5'>
-                            <TitleName 
-                                name={trackDetails.name}
-                                url={trackDetails.external_urls.spotify}
-                            />
-                            <ArtistPictures artists={artistsDetails}/>
-                            <MainStats 
-                                duration={trackDetails.duration_ms} 
-                                date={trackDetails.album.release_date} 
-                                popularity={trackDetails.popularity}
-                            />
-                            <Genres artists={artistsDetails}/>
-                            <Vibes 
-                                acousticness={audioFeatures.acousticness}
-                                danceability={audioFeatures.danceability}
-                                energy={audioFeatures.energy}
-                                speechiness={audioFeatures.speechiness}
-                                valence={audioFeatures.valence}
-                                index={audioFeatures.key}
-                            />
-                            <Stats 
-                                acousticness={audioFeatures.acousticness}
-                                danceability={audioFeatures.danceability}
-                                energy={audioFeatures.energy}
-                                tempo={audioFeatures.tempo}
-                                speechiness={audioFeatures.speechiness}
-                                valence={audioFeatures.valence}
-                            />
-
-                        </div>
                     </div>
                 </div>
             }
