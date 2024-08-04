@@ -63,6 +63,7 @@ export default function NavBar() {
                                         width={20} 
                                         height={20}
                                         className={dropdownOpen ? 'rotate-180' : ''} 
+                                        alt="dropdown"
                                     />
                                 </span>       
                             </button>

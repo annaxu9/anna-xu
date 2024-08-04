@@ -17,6 +17,7 @@ export default function ArtistPictures({artists}) {
                                             height={120}
                                             objectFit="cover"
                                             className=""
+                                            alt="artist pic"
                                         />
                                     </div>
                                 ) : (

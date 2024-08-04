@@ -40,7 +40,7 @@ export default function VibeCheck() {
       }
     }
 
-  }, []);
+  }, [token]);
 
   const handleSearch = async () => {
     if (!searchTerm) {

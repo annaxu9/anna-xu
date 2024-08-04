@@ -12,7 +12,7 @@ export default function Experience() {
     return (
         <div>
             <div className="flex gap-2">
-                <img src="/resume-images/URBN.jpeg" className="w-12 h-12"/>
+                <img src="/resume-images/URBN.jpeg" className="w-12 h-12" alt="urbn"/>
                 <h3>
                     <span className="font-bold w-2/3">URBN Web Software Engineering Intern</span> <br></br>
                     Philadelphia, PA (June 2023–August 2023)
@@ -62,7 +62,7 @@ export default function Experience() {
             </div>
         
             <div className="flex gap-2 items-center">
-                <img src="/resume-images/duck.png" className="w-12 h-12 mt-3"/>
+                <img src="/resume-images/duck.png" className="w-12 h-12 mt-3" alt="duck"/>
                 <div>
                     <h3 className="font-bold mt-4">Yale CS50 Head TA / TA</h3>
                     <h3>New Haven, CT (April 2022–December 2023)</h3>
@@ -97,7 +97,7 @@ export default function Experience() {
 
             <div>
                 <div className="flex gap-2 items-center">
-                    <img src="/home-images/nebraska.png" className="w-12 h-12 mt-5"/>
+                    <img src="/home-images/nebraska.png" className="w-12 h-12 mt-5" alt="nebraska"/>
                     <div>
                         <h3 className="font-bold mt-4">Undergraduate Researcher –– University of Nebraska Summer Research Program</h3>
                         <h3>Lincoln, NE (June 2022–August 2022)</h3>

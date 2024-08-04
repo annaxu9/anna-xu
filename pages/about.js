@@ -13,6 +13,7 @@ export default function AboutMe() {
                                 width={150}
                                 height={150}
                                 layout="responsive"
+                                alt="this is me in hawaii"
                             />
                         </div>
                     </div>

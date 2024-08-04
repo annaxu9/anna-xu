@@ -17,6 +17,7 @@ export default function Home() {
                 width={500}
                 height={500}
                 priority="high"
+                alt="this is me on prospect street"
               />
             </div>
           </div>
