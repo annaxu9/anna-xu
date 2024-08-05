@@ -7,7 +7,9 @@ export default function AboutMe() {
             <Head>
                 <title>Anna Xu</title>
             </Head>
-            <h1>More Coming Soon!</h1>
+
+            <h1>About Me!</h1>
+
             <div className="m-2 p-2  max-w-[400px] h-auto border-melrose border-2">
                 <div className="p-2  h-auto border-double border-pink border-2"> 
                     <div className="p-2  h-auto border-dashed border-yale border-2"> 
@@ -24,33 +26,26 @@ export default function AboutMe() {
                 </div>
             </div>
 
-            {/* <h1 className="text-center">My Web Development Journey</h1>
-            <p className="sm:w-3/4 p-2 m-2 bg-lightgray mb-8">
-            On a good day, coding is a fun, invigorating puzzle. On a bad day, coding is... less fun. As someone who didn&apos;t really code before college, I found myself often fighting an uphill battle.
-
-            That&apos;s why, before my senior year, I took a gap semester. While I taught CS50 and had extracurricular commitments, without classes I was able to carve out the space to finally fill my conceptual holes, practice without much stress, and explore. With a background in journalism, I used an investigative approach to learning the fundamental web development concepts—always asking questions and never giving up. When I used to feel apprehension at the thought of opening VSCode, I now engage with the application spontaneously and many times even eagerly.
-            </p> */}
-            {/* <div className="ml-2">
-                <h1>Some Things I Care About</h1>
-                <h1>Free Palestine</h1>
-                <h1>Mental Health</h1>
-                <h1>LGBTQ+ Rights</h1>
-                <h1>Black Lives Matter</h1>
-                <h1>Environment</h1>
-            </div>
-            <div>
-                <h1>Some Interests I have</h1>
-                <h1>Movies</h1>
-                <h1>Books</h1>
-                <h1>Podcasts</h1>
-                <h1>Music</h1>
-                <h1>Creating Art</h1>
-                <h1>Writing/Journalism</h1>
-                <h1>Theater</h1>
-                <h1>Chinese Food</h1>
-                <h1>Tarot</h1>
-                <h1>Outdoors</h1>
-            </div> */}
+            <ul className='list-disc mt-5'>
+                <li>
+                    I love the outdoors!
+                </li>
+                <li>
+                    My favorite food to make and to eat is summer rolls.
+                </li>
+                <li>
+                    I love learning about how computers, the web, and other systems work : ) 
+                </li>
+                <li>
+                    I have fast reflexes, so I'm very good at Egyptian Rat Screw (the card game—we should play sometime!)
+                </li>
+                <li>
+                    I want to get better at Mandarin.
+                </li>
+                <li className='mt-10'>
+                    Let's be friends on <a target="_blank" className="text-blue-600 dark:text-blue-500 hover:underline" href="https://www.goodreads.com/user/show/59329922-anna-xu">goodreads</a> and <a className="text-blue-600 dark:text-blue-500 hover:underline" href="https://letterboxd.com/annaxu/" target="_blank">letterboxd</a>! 
+                </li>
+            </ul>
         </div>
     )
 }

@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-function Experience({ image, title, date, location, mainText, supplementaryText, links }) {
+function Experience({ image, title, date, location, mainText, supplementaryText, links, additionalLinks }) {
     const [showMore, setShowMore] = useState(false);
 
     const toggleShowMore = () => {
         setShowMore(!showMore);
     };
+
+    console.log(additionalLinks)
 
     function parseMainText(mainText, links) {
         return mainText.map((text, index) => {
@@ -41,11 +43,25 @@ function Experience({ image, title, date, location, mainText, supplementaryText,
                         <p className="text-center">Read More!</p>
                     )}
                     {showMore && (
-                        <ul className="list-disc ml-10 m-4">
-                            {supplementaryText.map((text, index) => (
-                                <li key={index}>{text}</li>
-                            ))}
-                        </ul>
+                        <div>
+                            <ul className="list-disc ml-10 m-4">
+                                {supplementaryText.map((text, index) => (
+                                    <li key={index}>{text}</li>
+                                ))}
+                            </ul>
+                            <div >
+                                { additionalLinks && 
+                                <div className="ml-10 m-4">
+                                See Additional Links:
+                                    {additionalLinks.map((item) => {
+                                    return(
+                                        <a className="text-blue-600 dark:text-blue-500" href={item.href} target="_blank" rel="noopener noreferrer">{" " + item.text}</a>
+                                    )})
+                                    }
+                                </div>
+                                }
+                            </div>
+                        </div>
                     )}
                 </div>
             </div>

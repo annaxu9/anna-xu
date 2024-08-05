@@ -19,7 +19,7 @@ export default function Contact() {
             </div>
             <div className="p-2 m-2 flex items-center justify-center">
                 <div className="flex items-center justify-center">
-                    <a href="https://www.linkedin.com/in/anna-xu-354271192/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/anna-wenxin-xu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <FaLinkedin size={22} />
                     </a>
                     <a href="https://www.instagram.com/annax.u/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

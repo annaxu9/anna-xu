@@ -19,6 +19,9 @@ export default function Experiences() {
             ],
             links: [
                 {text: "HCII Summer Undergraduate Research Program", href: "https://hcii.cmu.edu/summer-research-program"}
+            ],
+            additionalLinks: [
+                {text: "Poster", href:"/resume-images/HCII_Poster"}
             ]
         },
         {
@@ -64,6 +67,9 @@ export default function Experiences() {
             links: [
                 { text: "CS50", href: "https://www.edx.org/cs50" },
                 { text: "Web API Guide", href: "https://docs.google.com/document/d/1Ik7YucGa8RRfZ9zIpEUBT9CF9Gff990rFnCkrs-d3q0/edit?usp=sharing" }
+            ],
+            additionalLinks: [
+                { text: "Web API Guide", href: "https://docs.google.com/document/d/1Ik7YucGa8RRfZ9zIpEUBT9CF9Gff990rFnCkrs-d3q0/edit"}
             ]
         },
         {
@@ -99,7 +105,8 @@ export default function Experiences() {
                     mainText={experience.mainText}
                     supplementaryText={experience.supplementaryText}
                     links={experience.links}
-                > </Experience>
+                    additionalLinks={experience.additionalLinks}
+                /> 
             ))}
         </div>
     );
