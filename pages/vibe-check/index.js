@@ -18,7 +18,6 @@ export default function VibeCheck() {
   };
   
   useEffect(() => {
-    document.title = 'Vibe Check';
     let accessToken = ''
     try {
       accessToken = localStorage.getItem('spotifyAccessToken');
