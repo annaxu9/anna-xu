@@ -75,7 +75,7 @@ export default function NavBar() {
                                 </span>       
                             </button>
                             {dropdownOpen && (
-                                <ul className="absolute right-0 mt-1.5 bg-melrose w-28 h-[140px] pb-2 flex flex-col justify-center text-white shadow rounded">
+                                <ul className="absolute right-0 mt-1.5 bg-melrose w-24 h-[140px] pb-2 flex flex-col justify-center text-white shadow rounded">
                                     <DropdownButton path="about" path_name="about" />
                                     <DropdownButton path="art-portfolio" path_name="art" />
                                     <DropdownButton path="contact" path_name="contact" />

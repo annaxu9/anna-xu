@@ -11,7 +11,7 @@ export default function Home() {
         <title>Anna Xu</title>
         <meta name="description" content="Anna Xu's Personal website" />
       </Head>
-      <div className="sine-wave-background flex justify-center items-start w-full h-full pt-5">
+      <div className="sine-wave-background flex justify-center items-start w-full h-full pt-5 pb-5">
         <div className="w-4/5 ">
           <h1 className="text-center mb-10 wobble-text">Aspiring Full Stack Engineer</h1>
           <div className="pb-12 flex justify-around items-center flex-col md:flex-row">
@@ -26,12 +26,11 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="hidden xs:block">
+          <div>
             <SwimmingFish />
           </div>
         </div>
       </div>
-      <div className="bg-lightgray p-5"></div>
       <div className="py-5">
         <div className="w-3/4 mx-auto p-5">
           <h1 className="mb-4 text-center"></h1>
