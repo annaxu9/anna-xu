@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useState } from 'react';
 import Image from 'next/image';
+import DropdownButton from "./DropdownButton";
 
 export default function NavBar() {
     const router = useRouter();
@@ -10,6 +11,13 @@ export default function NavBar() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+
+    const hovered = "css-rainbow-text"
+    const nothovered = "text-white"
+
+    const changeToHoverText = () => {
+
+    }
 
     return (
         <div className="flex justify-center mb-3 fixed top-0 left-0 w-full bg-white z-50 pb-2">
@@ -29,7 +37,6 @@ export default function NavBar() {
                             }
                         </div>
                     </div>
-
 
                     <ul className="flex justify-center items-center">
                         <li className="mr-1.5 sm:mr-2 text-center hover:bg-color4 ">
@@ -54,8 +61,8 @@ export default function NavBar() {
                                 <FaInstagram size={22} />
                             </a>                    
                         </li>
-                        <li className=" p-1.5 text-center hover:bg-color4 relative">
-                            <button onClick={toggleDropdown} className="flex">
+                        <li onClick={toggleDropdown} onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown} className=" p-1.5 text-center hover:bg-color4 relative">
+                            <button  className="flex">
                                 more 
                                 <span className="hidden sm:block mt-1">
                                     <Image 
@@ -68,37 +75,12 @@ export default function NavBar() {
                                 </span>       
                             </button>
                             {dropdownOpen && (
-                                <ul className="absolute right-0 mt-1.5 bg-melrose p-2 text-white shadow rounded">
-                                    <li>
-                                        <Link href="/about" className="z-100 p-1 rounded" onClick={toggleDropdown}>
-                                            about
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/art-portfolio" className="z-100 p-1 rounded" onClick={toggleDropdown}>
-                                            art
-                                        </Link>
-                                    </li>
-                                    {/* <li>
-                                        <Link href="/colors" className="z-100 p-1 rounded" onClick={toggleDropdown}>
-                                            colors
-                                        </Link>
-                                    </li> */}
-                                    <li>
-                                        <Link href="/contact" className="z-100 p-1 rounded" onClick={toggleDropdown}>
-                                            contact
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/resume" className="z-100 p-1 rounded" onClick={toggleDropdown}>
-                                            resume
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/skills" className="z-100 p-1 rounded" onClick={toggleDropdown}>
-                                            skills
-                                        </Link>
-                                    </li>
+                                <ul className="absolute right-0 mt-1.5 bg-melrose w-28 h-[140px] pb-2 flex flex-col justify-center text-white shadow rounded">
+                                    <DropdownButton path="about" path_name="about" />
+                                    <DropdownButton path="art-portfolio" path_name="art" />
+                                    <DropdownButton path="contact" path_name="contact" />
+                                    <DropdownButton path="resume" path_name="resume" />
+                                    <DropdownButton path="skills" path_name="skills" />
                                 </ul>
                             )}
                         </li>

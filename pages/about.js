@@ -32,7 +32,7 @@ export default function AboutMe() {
             </p> */}
             {/* <div className="ml-2">
                 <h1>Some Things I Care About</h1>
-                <h1>Free Palestine / End This War!</h1>
+                <h1>Free Palestine</h1>
                 <h1>Mental Health</h1>
                 <h1>LGBTQ+ Rights</h1>
                 <h1>Black Lives Matter</h1>
