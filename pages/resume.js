@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Experience from '../components/Resume/Experience';
+import Experience from '../components/Resume/Experiences';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -7,7 +7,7 @@ export default function Resume() {
     const [isScrolled, setIsScrolled] = useState(false);
 
     const coursework = ["Data Structures and Programming Techniques", "Algorithms", "Full Stack Web Development", "Sofware Engineering", "Human Computer Interaction", "Data Visualization", "Systems Programming and Computer Architecture"]
-    const nextsem = ["Operating Systems", "Networks", "Object Oriented Programming"]
+    const nextsem = ["Object Oriented Programming", "Principles of Computer System Design", "Computer System Security"]
 
     const handleScroll = () => {
         const position = window.scrollY;
@@ -32,7 +32,6 @@ export default function Resume() {
             <hr className='mb-8'></hr>
             <div className="">
                 <h1 className="text-center bavista2">Education</h1>
-                <p></p>
                 <div className='ml-6 mb-4'>
                     <p><span className='font-bold text-yale'> 🐶 Yale University</span> - go bulldogs!</p>
                     <p>👩🏻‍💻 B.S. in Computer Science</p>

@@ -52,7 +52,7 @@ export default function NavBar() {
                             }
                         </li>
                         <li className="mr-1.5 p-1 text-center hover:bg-color4">
-                            <a href="https://www.linkedin.com/in/anna-xu-354271192/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/anna-wenxin-xu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <FaLinkedin size={22} />
                             </a>
                         </li>
