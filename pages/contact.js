@@ -1,8 +1,12 @@
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import Head from 'next/head';
 
 export default function Contact() {
     return (
         <div className="w-11/12 mx-auto">
+            <Head>
+                <title>Anna Xu</title>
+            </Head>
             <h1 className="text-center">Contact Me!</h1>
             {/* <h1 className="text-center m-4">Currently actively looking for summer internships for software engineering and/or research opportunities in Human Computer Interaction.</h1> */}
             <div className="p-2 m-2 flex items-center justify-center">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Experience from '../components/Resume/Experience';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Resume() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,6 +24,9 @@ export default function Resume() {
 
     return (
         <div className="w-4/5 mx-auto">
+            <Head>
+                <title>Anna Xu</title>
+            </Head>
             <h1 className={`transition-colors duration-500 bavista ${isScrolled ? 'text-white' : 'text-melrose'}`}>Oh hi<span className="nervada">!</span> we<span className="nervada">l</span>come<span className="nervada">!</span><span className='not-italic text-3xl'> 👩🏻‍💻 📖 🧠 💻</span></h1>
             <p className='text-center'></p>
             <hr className='mb-8'></hr>

@@ -3,7 +3,8 @@ import SpotifySearch from "../../components/Vibe-Check/SpotifySearch";
 import { AuthProvider } from '../../contexts/AuthContext'
 import { searchSpotify } from "../../utils/spotify";
 import SearchResults from "../../components/Vibe-Check/SearchResults";
-import Link from "next/link";
+// import Link from "next/link";
+import Head from "next/head";
 
 export default function VibeCheck() {
   const [token, setToken] = useState('');
@@ -60,6 +61,9 @@ export default function VibeCheck() {
   return (
 
     <AuthProvider>
+      <Head>
+        <title>Vibe Check</title>
+      </Head>
       <div className="p-5 text-center animated_rainbow_1">vibe check</div>
       {!isAuthenticated && <div className="flex justify-center"><button className="mt-10 px-6 py-2 bg-melrose text-white rounded hover:bg-blue-700 transition-colors duration-200 ease-in-out shadow-lg" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }} onClick={handleLogin}>Login with Spotify</button></div>}
       {isAuthenticated && (

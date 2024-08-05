@@ -8,6 +8,7 @@ import Genres from '../../components/Vibe-Check/Genres';
 import Vibes from '../../components/Vibe-Check/Vibes';
 import Stats from '../../components/Vibe-Check/Stats';
 import Image from 'next/image';
+import Head from 'next/head';
 
 const SongDetails = () => {
     const router = useRouter();
@@ -30,6 +31,9 @@ const SongDetails = () => {
             <iframe className='w-full mt-9' src={spotify_link} width="200" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             { loading ? <p className='text-center'>Loading...</p> :
                 <div className='bg-black p-3 sm:p-9 w-full'>
+                    <Head>
+                        <title>{trackDetails.name}</title>
+                    </Head>
                     <div className='bg-white p-5'>
                             <Image 
                             src="/icons/spotify.png"

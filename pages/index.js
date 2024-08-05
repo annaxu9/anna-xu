@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import MyGrid from "../components/Screen/MyGrid"
 import SwimmingFish from "../components/Screen/Fish/SwimmingFish"
 import Image from "next/image"
@@ -6,6 +7,10 @@ import Link from "next/link"
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>Anna Xu</title>
+        <meta name="description" content="Anna Xu's Personal website" />
+      </Head>
       <div className="sine-wave-background flex justify-center items-start w-full h-full pt-5">
         <div className="w-4/5 ">
           <h1 className="text-center mb-10 wobble-text">Aspiring Full Stack Engineer</h1>

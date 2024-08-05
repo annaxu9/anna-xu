@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ArtImage from "../components/Art/ArtImage"
 import Carousel from "../components/Art/Carousel"
+import Head from "next/head"
 
 export default function ArtPortfolio() {
     const filters = [
@@ -41,6 +42,9 @@ export default function ArtPortfolio() {
     const [filter, setFilter] = useState("All")
   return (
     <div className="w-4/5 mx-auto">
+        <Head>
+            <title>Anna Xu</title>
+        </Head>
         <h1 className="text-center bavista text-[#a1c4fd]">We<span className="nervada">l</span>come to my A<span className="nervada">r</span>t Po<span className="nervada">r</span>tfo<span className="nervada">l</span>io<span className="nervada">!!!!!!</span></h1>
         <div className="text-[#a1c4fd] flex justify-center items-center rounded-lg m-2">
         <h1 className="ml-4">Filter by Medium:</h1>

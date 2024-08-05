@@ -1,8 +1,12 @@
 import Image from 'next/image'
+import Head from 'next/head'
 
 export default function AboutMe() {
     return (
         <div className="w-4/5 mx-auto flex flex-col items-center">
+            <Head>
+                <title>Anna Xu</title>
+            </Head>
             <h1>More Coming Soon!</h1>
             <div className="m-2 p-2  max-w-[400px] h-auto border-melrose border-2">
                 <div className="p-2  h-auto border-double border-pink border-2"> 

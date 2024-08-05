@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Head from "next/head";
 
 export default function Skills() {
     const [skills, setSkills] = useState([]);
@@ -54,6 +55,9 @@ export default function Skills() {
   
     return (
         <div className="w-11/12 mx-auto">
+            <Head>
+                <title>Anna Xu</title>
+            </Head>
 
             <h1 className="text-center">Anna&apos;s Skills</h1>
 
