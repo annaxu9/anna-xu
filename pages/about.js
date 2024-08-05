@@ -37,13 +37,13 @@ export default function AboutMe() {
                     I love learning about how computers, the web, and other systems work : ) 
                 </li>
                 <li>
-                    I have fast reflexes, so I'm very good at Egyptian Rat Screw (the card game—we should play sometime!)
+                    I have fast reflexes, so I&apos;m very good at Egyptian Rat Screw (the card game), challenge me!
                 </li>
                 <li>
                     I want to get better at Mandarin.
                 </li>
                 <li className='mt-10'>
-                    Let's be friends on <a target="_blank" className="text-blue-600 dark:text-blue-500 hover:underline" href="https://www.goodreads.com/user/show/59329922-anna-xu">goodreads</a> and <a className="text-blue-600 dark:text-blue-500 hover:underline" href="https://letterboxd.com/annaxu/" target="_blank">letterboxd</a>! 
+                    Let&apos;s be friends on <a target="_blank" className="text-blue-600 dark:text-blue-500 hover:underline" href="https://www.goodreads.com/user/show/59329922-anna-xu">goodreads</a> and <a className="text-blue-600 dark:text-blue-500 hover:underline" href="https://letterboxd.com/annaxu/" target="_blank">letterboxd</a>! 
                 </li>
             </ul>
         </div>

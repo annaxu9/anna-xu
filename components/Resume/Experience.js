@@ -55,7 +55,7 @@ function Experience({ image, title, date, location, mainText, supplementaryText,
                                 See Additional Links:
                                     {additionalLinks.map((item) => {
                                     return(
-                                        <a className="text-blue-600 dark:text-blue-500" href={item.href} target="_blank" rel="noopener noreferrer">{" " + item.text}</a>
+                                        <a key={item.href} className="text-blue-600 dark:text-blue-500" href={item.href} target="_blank" rel="noopener noreferrer">{" " + item.text}</a>
                                     )})
                                     }
                                 </div>
