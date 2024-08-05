@@ -7,6 +7,7 @@ class MyDocument extends Document {
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
           <link rel="icon" href="/icons/AX.png" />
+          <title>Anna Xu</title>
         </Head>
         <body>
           <Main />
