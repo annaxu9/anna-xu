@@ -50,7 +50,7 @@ const MyGrid = () => {
     };
 
     return (
-      <div className='relative'>
+      <div className='relative cursor-pointer'>
         <div className="grid-container pb-5" onClick={handleGridClick}>
             {currentImages.map((src, index) => (
                 index === 6 || index === 2 || index === 7 || index === 8 ? (

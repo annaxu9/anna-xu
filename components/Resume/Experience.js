@@ -7,8 +7,6 @@ function Experience({ image, title, date, location, mainText, supplementaryText,
         setShowMore(!showMore);
     };
 
-    console.log(additionalLinks)
-
     function parseMainText(mainText, links) {
         return mainText.map((text, index) => {
             if (text.startsWith("[") && text.endsWith("]")) {
@@ -36,9 +34,8 @@ function Experience({ image, title, date, location, mainText, supplementaryText,
                 {parseMainText(mainText, links)}
             </p>
 
-            <div className="bg-[#FADB4A] rounded p-2 cursor-pointer" onClick={toggleShowMore}>
-
-                <div className={`transition-all duration-1000 overflow-hidden ${showMore ? 'max-h-screen' : 'max-h-20'}`}>
+            <div className="transition-all duration-500 bg-[#FADB4A] rounded p-2 cursor-pointer" onClick={toggleShowMore}>
+                <div className="transition-all duration-500">
                     {!showMore && (
                         <p className="text-center">Read More!</p>
                     )}
