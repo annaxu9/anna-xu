@@ -213,14 +213,18 @@ a {
   perspective: 1000px;
 }
 
-.flutter-image {
-  display: block;
-  transform-origin: center;
-  transition: transform 0.2s ease-in-out;
-}
+/* flutter image not for phones */
 
-.flutter-image:hover {
-  animation: flutter 1s infinite alternate;
+@media (min-width: 480px) {
+  .xs\:flutter-image {
+    display: block;
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .xs\:flutter-image:hover {
+    animation: flutter 1s infinite alternate;
+  }
 }
 
 @keyframes flutter {

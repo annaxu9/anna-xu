@@ -23,7 +23,7 @@ export default function Home() {
                 height={500}
                 priority="high"
                 alt="this is me on prospect street"
-                className='flutter-image'
+                className="xs:flutter-image"
               />
             </div>
           </div>
