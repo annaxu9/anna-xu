@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <div className="emoji-cursor-container sine-wave-background flex justify-center items-start w-full h-full pt-5 pb-5">
         <div className="w-4/5 ">
-          <h1 className="text-center mb-10 wobble-text">Aspiring Full Stack Engineer</h1>
+          <h1 className="text-center mb-10 wobble-text">Full Stack Engineer</h1>
           <div className="pb-12 flex justify-around items-center flex-col md:flex-row ">
             <div className="hidden xs:block"><MyGrid className="w-2/3 	"/></div>
             <div className="xs:w-1/3 flex items-center xs:mt-10 md:mt-0 md:ml-24 image-container">
