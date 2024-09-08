@@ -14,7 +14,6 @@ export default function ArtistPictures({artists}) {
                                         src={artist.images[0].url}
                                         width={120} 
                                         height={120}
-                                        className="rounded-full"
                                         alt="artist pic"
                                     />
                                 ) : (
