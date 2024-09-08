@@ -10,7 +10,7 @@ export default function ArtistPictures({artists}) {
                             <h2 className="">{artist.name}</h2>
                             {
                                 artist.images && artist.images.length > 0 ? (
-                                    <div className="">
+                                    <div>
                                         <Image
                                             src={artist.images[0].url}
                                             width={120} 
