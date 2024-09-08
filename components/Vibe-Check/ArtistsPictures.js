@@ -15,7 +15,7 @@ export default function ArtistPictures({artists}) {
                                             src={artist.images[0].url}
                                             width={120} 
                                             height={120}
-                                            objectFit="cover"
+                                            style={{ objectFit: 'cover' }}
                                             alt="artist pic"
                                         />
                                     </div>
