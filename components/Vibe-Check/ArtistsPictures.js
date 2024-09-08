@@ -10,15 +10,13 @@ export default function ArtistPictures({artists}) {
                             <h2 className="">{artist.name}</h2>
                             {
                                 artist.images && artist.images.length > 0 ? (
-                                    <div>
-                                        <Image
-                                            src={artist.images[0].url}
-                                            width={120} 
-                                            height={120}
-                                            style={{ objectFit: 'cover' }}
-                                            alt="artist pic"
-                                        />
-                                    </div>
+                                    <Image
+                                        src={artist.images[0].url}
+                                        width={120} 
+                                        height={120}
+                                        className="rounded-full"
+                                        alt="artist pic"
+                                    />
                                 ) : (
                                     <h2 className="md:text-sm">(No Image)</h2>
                                 )
