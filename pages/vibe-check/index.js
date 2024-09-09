@@ -31,7 +31,6 @@ export default function VibeCheck() {
     if (!token) {
       const urlParams = new URLSearchParams(window.location.search);
       accessToken = urlParams.get('access_token');
-      console.log("This is the token I should be using ", accessToken)
   
       if (accessToken) {
         // setToken(accessToken);

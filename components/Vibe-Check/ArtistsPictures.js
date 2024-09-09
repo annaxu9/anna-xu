@@ -1,7 +1,5 @@
 import Image from "next/image"
 export default function ArtistPictures({artists}) {
-    console.log("Where is image", artists)
-    console.log(artists[0].images[0].url)
     return (
         <div className="flex flex-col sm:flex-row justify-center items-center">
             {

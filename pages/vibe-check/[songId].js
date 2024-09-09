@@ -20,7 +20,6 @@ const SongDetails = () => {
     useEffect(() => {
         if (trackDetails) {
             setLoading(false)
-            console.log(trackDetails, audioFeatures, artistsDetails)
         } else {
             setLoading(true)
         }

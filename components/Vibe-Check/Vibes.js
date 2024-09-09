@@ -4,7 +4,6 @@ import {getFirstColor, getSecondColor, getThirdColor, energyComment} from "../..
 export default function Vibes({acousticness, energy, danceability, valence, speechiness, index}) {
     
     const firstColor = getFirstColor(valence, danceability, energy, speechiness)
-    console.log(firstColor)
 
     return (
 <div className="flex flex-col items-center">

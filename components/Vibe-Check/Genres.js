@@ -2,8 +2,6 @@ import { getGenres } from "../../utils/spotify"
 
 export default function Genres({ artists }) {
     const genres = getGenres(artists);
-    console.log(genres); // Assuming this is a Set or Array of genre strings
-
     // Convert Set to Array if genres is a Set
     const genresArray = Array.from(genres);
 
