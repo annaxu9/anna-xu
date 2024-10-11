@@ -10,7 +10,7 @@ const gridImages = [
     "/home-images/cr13.png", "/home-images/cr14.png", "/home-images/cr15.png",
     "/home-images/cr16.png", "/home-images/cr17.png", "/home-images/cr18.png", 
     "/home-images/lavender.png", "/home-images/mu.png", "/home-images/tarot.png", "/home-images/glass-animals.png",
-    "/home-images/nebraska.png", "/home-images/rbhs.png", "/home-images/pride.png", "/home-images/hydrangea.png",
+    "/home-images/nebraska.png", "/home-images/rbhs.png", "/home-images/hydrangea.png",
     "/home-images/blueberries.png", "/home-images/tonys-chocolate.png", 
     "/home-images/uo.png", "/home-images/070Shake.png", "/home-images/chinese-duck.png", 
     "/home-images/saggitarius.png", "/home-images/spotify.png", "/home-images/strawberry-lemonade.png",
