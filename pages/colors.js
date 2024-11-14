@@ -7,7 +7,6 @@ import {NormalSquares} from '../components/Color/NormalSquares.js';
 export default function ColorPage() {
     <div>
         <NormalSquares />
-        <AdjustableSquares />
     </div>
 };
 
