@@ -14,7 +14,7 @@ export default function NavBar() {
 
   return (
     <div className="fixed top-0 left-0 w-full bg-white z-50 pb-2">
-      <nav className="w-full sm:w-5/6 mx-auto">
+      <nav className="w-11/12 sm:w-5/6 mx-auto">
         <div className="flex justify-between items-center px-4 py-3">
           {/* Left Side - Responsive Name */}
           <div className="flex-grow">
