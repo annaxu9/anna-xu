@@ -50,7 +50,6 @@ export default function Resume() {
             Skills
           </p>
         </Link>
-
       </div>
 
       <div>
@@ -93,10 +92,10 @@ export default function Resume() {
               yaleims.com
             </a>
             <p>
-              Yale's 14 colleges compete annually for the Tyng Cup in Intramural
-              (IM) sports, but there was no centralized way to view standings
-              and schedules. We built YaleIMs to improve accessibility and
-              engagement.
+              Yale&apos;s 14 colleges compete annually for the Tyng Cup in
+              Intramural (IM) sports, but there was no centralized way to view
+              standings and schedules. We built YaleIMs to improve accessibility
+              and engagement.
             </p>
           </div>
         </div>
@@ -109,7 +108,7 @@ export default function Resume() {
             <li>
               Developed <strong>Vibe Check</strong>, a web application that uses
               the Spotify API to search songs/artists and analyze their data.
-              Displayed song "vibes" based on key audio features.
+              Displayed song &quot;vibes&quot; based on key audio features.
             </li>
           </ul>
         </div>
