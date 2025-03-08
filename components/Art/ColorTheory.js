@@ -29,18 +29,34 @@ export default function ColorTheory() {
     setSetColorFunction(() => colorSetter);
     setColor(currentColor);
     setPickerVisible(true);
-    setPickerPosition({ x: event.clientX, y: event.clientY }); // Place picker near the clicked square
+
+    // Get bounding rectangle to position picker near clicked element
+    const rect = event.target.getBoundingClientRect();
+    const screenWidth = window.innerWidth;
+
+    // Adjust position for mobile screens (center it)
+    if (screenWidth < 768) {
+      setPickerPosition({
+        x: screenWidth / 2 - 100, // Center horizontally
+        y: window.scrollY + window.innerHeight / 2 - 150, // Center vertically
+      });
+    } else {
+      setPickerPosition({
+        x: rect.left + window.scrollX + rect.width + 10, // Right side of clicked element
+        y: rect.top + window.scrollY, // Same vertical level as clicked element
+      });
+    }
   };
 
   return (
     <div className="flex flex-col items-center">
       <p className="text-gray-700 text-center max-w-md mt-2">
         Experiment with color combinations using this interactive Color Theory
-        tool. Click on the squares to change colors!
+        tool. Tap on the squares to change colors!
       </p>
 
       <div className="flex items-center justify-center p-4 mt-6">
-        <div className="grid grid-cols-2 gap-6 w-96 h-60">
+        <div className="grid grid-cols-2 gap-6 w-96 h-60 max-w-full">
           {/* Large Square 1 */}
           <div
             className="relative cursor-pointer flex items-center justify-center w-full h-full"
@@ -51,7 +67,7 @@ export default function ColorTheory() {
           >
             {/* Small Square inside Large Square 1 */}
             <div
-              className="w-12 h-12 cursor-pointer"
+              className="w-14 h-14 cursor-pointer"
               style={{ backgroundColor: smallSquare1Color }}
               onClick={(e) => {
                 e.stopPropagation();
@@ -70,7 +86,7 @@ export default function ColorTheory() {
           >
             {/* Small Square inside Large Square 2 */}
             <div
-              className="w-12 h-12 cursor-pointer"
+              className="w-14 h-14 cursor-pointer"
               style={{ backgroundColor: smallSquare2Color }}
               onClick={(e) => {
                 e.stopPropagation();
@@ -81,12 +97,16 @@ export default function ColorTheory() {
         </div>
       </div>
 
-      {/* Render the color picker if visible */}
+      {/* Floating Color Picker with Mobile Adjustments */}
       {pickerVisible && (
         <div
           ref={pickerRef}
-          className="absolute"
-          style={{ top: pickerPosition.y + 10, left: pickerPosition.x + 10 }}
+          className="fixed z-50 p-2 bg-white shadow-lg rounded-lg"
+          style={{
+            top: pickerPosition.y,
+            left: pickerPosition.x,
+            maxWidth: "90%",
+          }}
         >
           <ChromePicker
             color={color}
