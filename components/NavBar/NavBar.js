@@ -12,43 +12,40 @@ export default function NavBar() {
 
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
-  const hovered = "css-rainbow-text";
-  const nothovered = "text-white";
-
-  const changeToHoverText = () => {};
-
   return (
-    <div className="flex justify-center mb-3 fixed top-0 left-0 w-full bg-white z-50 pb-2">
-      <nav className="w-full sm:w-5/6">
-        <div className="flex justify-between items-center p-1 mt-5 rounded">
-          {/* Left Side */}
-          <div className="flex-grow pl-2">
-            <div>
-              {currentPath == "/" ? (
-                <Link href="/" className="z-100 text-melrose">
-                  anna xu
-                </Link>
-              ) : (
-                <Link href="/" className="z-100 text-black">
-                  anna xu
-                </Link>
-              )}
-            </div>
+    <div className="fixed top-0 left-0 w-full bg-white z-50 pb-2">
+      <nav className="w-full sm:w-5/6 mx-auto">
+        <div className="flex justify-between items-center px-4 py-3">
+          {/* Left Side - Responsive Name */}
+          <div className="flex-grow">
+            <Link
+              href="/"
+              className={`text-lg ${
+                currentPath === "/" ? "text-melrose" : "text-black"
+              }`}
+            >
+              <span className="block sm:hidden">AX</span>{" "}
+              {/* Show "AX" on mobile */}
+              <span className="hidden sm:block">anna xu</span>{" "}
+              {/* Show full name on larger screens */}
+            </Link>
           </div>
 
-          <ul className="flex justify-center items-center">
-            <li className="sm:mr-2 text-center hover:bg-color4 ">
-              {currentPath === "/vibe-check" ? (
-                <Link href="/vibe-check" className="z-100 text-melrose">
-                  vibe check
-                </Link>
-              ) : (
-                <Link href="/vibe-check" className="z-100 css-rainbow-text">
-                  vibe check
-                </Link>
-              )}
+          {/* Navigation Links & Icons */}
+          <ul className="flex items-center space-x-3">
+            <li className="hidden sm:block">
+              <Link
+                href="/vibe-check"
+                className={
+                  currentPath === "/vibe-check"
+                    ? "text-melrose"
+                    : "css-rainbow-text"
+                }
+              >
+                vibe check
+              </Link>
             </li>
-            <li className="mr-1.5 text-center hover:bg-color4">
+            <li>
               <a
                 href="https://www.linkedin.com/in/anna-wenxin-xu/"
                 target="_blank"
@@ -58,7 +55,7 @@ export default function NavBar() {
                 <FaLinkedin size={22} />
               </a>
             </li>
-            <li className="mr-1.5 text-center hover:bg-color4">
+            <li>
               <a
                 href="https://www.instagram.com/annax.u/"
                 target="_blank"
@@ -68,7 +65,7 @@ export default function NavBar() {
                 <FaInstagram size={22} />
               </a>
             </li>
-            <li className="mr-1.5 text-center hover:bg-color4">
+            <li>
               <a
                 href="https://github.com/annaxu9"
                 target="_blank"
@@ -78,26 +75,26 @@ export default function NavBar() {
                 <FaGithub size={22} />
               </a>
             </li>
-            <li
-              onClick={toggleDropdown}
-              onMouseEnter={toggleDropdown}
-              onMouseLeave={toggleDropdown}
-              className=" p-1.5 text-center hover:bg-color4 relative"
-            >
-              <button className="flex">
+
+            {/* Dropdown Menu */}
+            <li className="relative">
+              <button
+                onClick={toggleDropdown}
+                className="flex items-center px-2 py-1 hover:bg-gray-200 rounded-md"
+              >
                 more
-                <span className="hidden sm:block mt-1">
-                  <Image
-                    src="/icons/arrow.png"
-                    width={20}
-                    height={20}
-                    className={dropdownOpen ? "rotate-180" : ""}
-                    alt="dropdown"
-                  />
-                </span>
+                <Image
+                  src="/icons/arrow.png"
+                  width={20}
+                  height={20}
+                  className={`ml-1 transform ${
+                    dropdownOpen ? "rotate-180" : ""
+                  }`}
+                  alt="dropdown"
+                />
               </button>
               {dropdownOpen && (
-                <ul className="absolute right-0 mt-1.5 bg-melrose w-24 h-[140px] pb-2 flex flex-col justify-center text-white shadow rounded">
+                <ul className="absolute right-0 mt-2 bg-melrose w-28 py-2 pb-3 shadow-lg rounded-md text-white">
                   <DropdownButton path="about" path_name="about" />
                   <DropdownButton path="resume" path_name="resume" />
                   <DropdownButton path="skills" path_name="skills" />

@@ -297,7 +297,7 @@ export default function Skills() {
       : [[selectedCategory, skills[selectedCategory] || []]];
 
   return (
-    <div className="w-11/12 mx-auto py-10">
+    <div className="w-11/12 mx-auto py-5">
       <Head>
         <title>Anna Xu | Skills</title>
       </Head>
