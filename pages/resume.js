@@ -29,7 +29,7 @@ export default function Resume() {
   }, []);
 
   return (
-    <div className="w-4/5 mx-auto">
+    <div className="w-11/12 sm:w-4/5 mx-auto">
       <Head>
         <title>Anna Xu</title>
       </Head>
@@ -75,7 +75,7 @@ export default function Resume() {
         {/* Projects Section */}
         <h1 className="text-center bavista2 mt-10">Products</h1>
         {/* YaleIMs Project */}
-        <div className="flex justify-center items-center mb-5 gap-2 bg-melrose100 p-4 rounded-lg pb-8">
+        <div className="flex flex-col sm:flex-row justify-center items-center mb-5 gap-2 bg-melrose100 p-4 rounded-lg pb-8">
           <Image
             src="/resume-images/yaleims.png"
             alt="YaleIMs Project"
