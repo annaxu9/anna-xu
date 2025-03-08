@@ -43,6 +43,14 @@ export default function Skills() {
           "Developed interactive data visualizations using D3.js for VirusReader, allowing scientists to explore virology datasets more effectively.",
       },
       {
+        name: "Mobile App Development",
+        technologies: "React Native, Flutter",
+        level: "Proficient",
+        experience:
+          "Developed the initial YaleIMs app using React Native, implementing key features such as authentication, navigation, and API integration. Later explored Flutter for personal projects, gaining experience in cross-platform development and UI design.",
+      },
+
+      {
         name: "CSS Libraries",
         technologies: "Tailwind, Bootstrap",
         level: "Expert",
@@ -81,6 +89,13 @@ export default function Skills() {
     ],
 
     "Software Engineering": [
+      {
+        name: "Object-Oriented Programming (OOP)",
+        technologies: "Java, Python, C++, Design Patterns",
+        level: "Proficient",
+        experience:
+          "Applied OOP principles such as encapsulation, inheritance, and polymorphism in software projects. Used design patterns like Singleton, Factory, and Observer to build scalable and maintainable applications. Developed OOP-based solutions in Java, Python, and C++ for coursework and personal projects.",
+      },
       {
         name: "Project Management",
         technologies: "Trello, Jira, Agile Methodologies, Team Leadership",

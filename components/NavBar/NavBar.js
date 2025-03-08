@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { useState } from "react";
 import Image from "next/image";
 import DropdownButton from "./DropdownButton";
@@ -68,6 +68,16 @@ export default function NavBar() {
                 <FaInstagram size={22} />
               </a>
             </li>
+            <li className="mr-1.5 p-1 text-center hover:bg-color4">
+              <a
+                href="https://github.com/annaxu9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Github"
+              >
+                <FaGithub size={22} />
+              </a>
+            </li>
             <li
               onClick={toggleDropdown}
               onMouseEnter={toggleDropdown}
@@ -89,9 +99,9 @@ export default function NavBar() {
               {dropdownOpen && (
                 <ul className="absolute right-0 mt-1.5 bg-melrose w-24 h-[140px] pb-2 flex flex-col justify-center text-white shadow rounded">
                   <DropdownButton path="about" path_name="about" />
-                  <DropdownButton path="art-portfolio" path_name="art" />
-                  <DropdownButton path="contact" path_name="contact" />
                   <DropdownButton path="resume" path_name="resume" />
+                  <DropdownButton path="skills" path_name="skills" />
+                  <DropdownButton path="art-portfolio" path_name="art" />
                 </ul>
               )}
             </li>

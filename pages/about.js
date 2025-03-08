@@ -1,51 +1,70 @@
-import Image from 'next/image'
-import Head from 'next/head'
+import Image from "next/image";
+import Head from "next/head";
+import { FaEnvelope } from "react-icons/fa";
 
 export default function AboutMe() {
-    return (
-        <div className="w-4/5 mx-auto flex flex-col items-center">
-            <Head>
-                <title>Anna Xu</title>
-            </Head>
+  return (
+    <div className="w-4/5 mx-auto flex flex-col items-center">
+      <Head>
+        <title>About & Contact | Anna Xu</title>
+      </Head>
 
-            <h1>About Me!</h1>
+      {/* Header */}
+      <h1 className="text-3xl font-bold mt-6">About Anna</h1>
 
-            <div className="m-2 p-2  max-w-[400px] h-auto border-melrose border-2">
-                <div className="p-2  h-auto border-double border-pink border-2"> 
-                    <div className="p-2  h-auto border-dashed border-yale border-2"> 
-                        <div className="p-2  h-auto flex flex-col items-center">
-                            <Image 
-                                src="/about-images/hawaii.jpeg"
-                                width={150}
-                                height={150}
-                                layout="responsive"
-                                alt="this is me in hawaii"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <ul className='list-disc mt-5'>
-                <li>
-                    I love the outdoors!
-                </li>
-                <li>
-                    My favorite food to make and to eat is summer rolls.
-                </li>
-                <li>
-                    I love learning about how computers, the web, and other systems work : ) 
-                </li>
-                <li>
-                    I have fast reflexes, so I&apos;m very good at Egyptian Rat Screw (the card game), challenge me!
-                </li>
-                <li>
-                    I want to get better at Mandarin.
-                </li>
-                <li className='mt-10'>
-                    Let&apos;s be friends on <a target="_blank" className="text-blue-600 dark:text-blue-500 hover:underline" href="https://www.goodreads.com/user/show/59329922-anna-xu">goodreads</a> and <a className="text-blue-600 dark:text-blue-500 hover:underline" href="https://letterboxd.com/annaxu/" target="_blank">letterboxd</a>! 
-                </li>
-            </ul>
+      {/* Image Container */}
+      <div className="m-4 p-3 max-w-[400px] border-2 border-melrose rounded-lg shadow-md">
+        <div className="p-2 border-2 border-pink border-double rounded-md">
+          <div className="p-2 border-2 border-yale border-dashed rounded-sm">
+            <Image
+              src="/about-images/hawaii.jpeg"
+              width={150}
+              height={150}
+              layout="intrinsic"
+              alt="Anna in Hawaii"
+              className="rounded-md"
+            />
+          </div>
         </div>
-    )
+      </div>
+
+      {/* About Me Section */}
+      <p className="text-lg text-gray-700 text-center max-w-lg">
+        I’m passionate about technology, design, and the intricate systems that
+        shape our world. As a Computer Science student at Yale University, I’ve
+        explored everything from web development and UI/UX to software
+        engineering and computer systems. I thrive at the intersection of
+        creativity and engineering, where human-centered design meets innovative
+        problem-solving.
+        <br />
+        <br />
+        Beyond coding, I have a strong foundation in art and design, having
+        taken multiple studio art courses and worked on projects involving
+        painting, printmaking, and set design. My artistic background enhances
+        my ability to craft intuitive and visually compelling digital
+        experiences.
+        <br />
+        <br />
+        When I’m not building, designing, or learning, you’ll most likely find
+        me outdoors and/or reading a book.{" "}
+      </p>
+
+      {/* Contact Section */}
+      <h2 className="text-2xl font-semibold mt-10">Get in Touch</h2>
+
+      <div className="flex flex-col items-center mt-4 space-y-4">
+        {/* Email */}
+        <div className="flex items-center space-x-2">
+          <FaEnvelope className="text-blue-600" size={24} />
+          <a
+            href="mailto:annawenxin@gmail.com"
+            target="_blank"
+            className="text-blue-600 hover:underline text-lg"
+          >
+            annawenxin@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 }

@@ -61,9 +61,6 @@ export default function Home() {
           <Link className="m-2 hover-effect" href="/resume">
             ⭑ Check out my resume
           </Link>
-          <Link className="m-2 hover-effect" href="/art-portfolio">
-            ⭑ Check out my art portfolio
-          </Link>
         </div>
       </div>
     </div>
