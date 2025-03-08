@@ -44,7 +44,7 @@ export default function Home() {
             <span className="font-bold grow-on-hover ">
               Education and Technology
             </span>
-            , specifically leveraging Artifical Intelligence and Game
+            , specifically leveraging Artificial Intelligence and Game
             development to create products that are user friendly, engaging, and{" "}
             <span className="font-bold grow-on-hover ">
               enhance human knowledge
