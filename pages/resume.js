@@ -57,8 +57,11 @@ export default function Resume() {
         <h1 className="text-center bavista2">Education</h1>
         <div className="ml-6 mb-4">
           <p>
-            <span className="font-bold text-yale"> 🐶 Yale University</span> -
-            go bulldogs!
+            <span className="font-bold text-yale">
+              {" "}
+              🐶 Yale University (2020-2024.5)
+            </span>{" "}
+            - go bulldogs!
           </p>
           <p>👩🏻‍💻 B.S. in Computer Science</p>
           <div className="ml-4 text-sm italic">
