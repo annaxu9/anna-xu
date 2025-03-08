@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import DropdownButton from "./DropdownButton";
 
@@ -9,8 +9,24 @@ export default function NavBar() {
   const router = useRouter();
   const currentPath = router.pathname;
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
-  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+  const toggleDropdown = () => setDropdownOpen((prev) => !prev);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    setDropdownOpen(false);
+  }, [currentPath]); // Close dropdown on navigation
 
   return (
     <div className="fixed top-0 left-0 w-full bg-white z-50 pb-2">
