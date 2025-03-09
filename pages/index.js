@@ -11,7 +11,7 @@ export default function Home() {
         <title>Anna Xu</title>
         <meta name="description" content="Anna Xu's Personal website" />
       </Head>
-      <div className="emoji-cursor-container sine-wave-background w-full h-full pt-5">
+      <div className="emoji-cursor-container sine-wave-background w-full h-full">
         <div>
           <h1 className="text-center mb-10 wobble-text">Full Stack Engineer</h1>
           <div className="flex justify-center items-center w-4/5 mx-auto">

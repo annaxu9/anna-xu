@@ -100,14 +100,6 @@ export default function ArtPortfolio() {
         </div>
       </div>
 
-      {filter === "All" || filter === "Color Theory" ? (
-        <div>
-          <hr className="my-4"></hr>
-          <h1 className="mb-4 text-center text-[#a1c4fd]">✨Color Theory✨</h1>
-          <ColorTheory />
-        </div>
-      ) : null}
-
       <div className="md:w-1/2 lg:1/3 mx-auto">
         {filter === "All" || filter === "Paintings" ? (
           <div>
@@ -210,6 +202,16 @@ export default function ArtPortfolio() {
                   </div>
                 )
             )}
+          </div>
+        ) : null}
+
+        {filter === "All" || filter === "Color Theory" ? (
+          <div>
+            <hr className="my-4"></hr>
+            <h1 className="mb-4 text-center text-[#a1c4fd]">
+              ✨Color Theory✨
+            </h1>
+            <ColorTheory />
           </div>
         ) : null}
 
