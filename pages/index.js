@@ -11,27 +11,27 @@ export default function Home() {
         <title>Anna Xu</title>
         <meta name="description" content="Anna Xu's Personal website" />
       </Head>
-      <div className="emoji-cursor-container sine-wave-background flex justify-center items-start w-full h-full pt-5 pb-5">
-        <div className="w-4/5 ">
+      <div className="emoji-cursor-container sine-wave-background w-full h-full pt-5">
+        <div>
           <h1 className="text-center mb-10 wobble-text">Full Stack Engineer</h1>
-          <div className="pb-12 flex justify-around items-center flex-col md:flex-row ">
-            <div className="hidden xs:block">
-              <MyGrid className="w-2/3 	" />
-            </div>
-            <div className="xs:w-1/3 flex items-center xs:mt-10 md:mt-0 md:ml-24 image-container">
-              <Image
-                src="/home-images/me.jpeg"
-                width={500}
-                height={500}
-                priority="high"
-                alt="this is me on prospect street"
-                className="xs:flutter-image"
-              />
+          <div className="flex justify-center items-center w-4/5 mx-auto">
+            <div className="pb-12 flex justify-around items-center flex-col md:flex-row ">
+              <div className="hidden xs:block">
+                <MyGrid className="w-2/3 	" />
+              </div>
+              <div className="xs:w-1/3 flex items-center xs:mt-10 md:mt-0 md:ml-24 image-container">
+                <Image
+                  src="/home-images/me.jpeg"
+                  width={500}
+                  height={500}
+                  priority="high"
+                  alt="this is me on prospect street"
+                  className="xs:flutter-image"
+                />
+              </div>
             </div>
           </div>
-          <div>
-            <SwimmingFish />
-          </div>
+          <SwimmingFish />
         </div>
       </div>
       <div className="py-5 custom-cursor">

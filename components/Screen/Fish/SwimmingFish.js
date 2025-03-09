@@ -1,50 +1,65 @@
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import styles from './SwimmingFish.module.css'; // Import the CSS module
+import React, { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
+import styles from "./SwimmingFish.module.css"; // Import CSS module
 
 function SwimmingFish() {
-  const [isFirstFishVisible, setIsFirstFishVisible] = useState(true);
-  const [showBubble, setShowBubble] = useState(false); // New state for speech bubble visibility
+  const [isSwimmingRight, setIsSwimmingRight] = useState(true);
+  const [showBubble, setShowBubble] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsFirstFishVisible(prevState => !prevState);
-    }, 15000); // 10 seconds interval
+      setIsSwimmingRight((prev) => !prev);
+    }, 15000); // 15 seconds per direction
 
     return () => clearInterval(interval);
   }, []);
 
-  // Function to handle fish click
-  const handleFishClick = () => {
-    setShowBubble(prev => !prev); // Toggle the visibility of the speech bubble
-  };
+  // Debounced fish click to prevent rapid toggling
+  const handleFishClick = useCallback(() => {
+    setShowBubble((prev) => !prev);
+  }, []);
 
   return (
-    <div>
-      {isFirstFishVisible && (
-        <div className={styles.fishContainerRight} onClick={handleFishClick}>
-          <Image src="/home-images/fish.png" alt="Swimming Fish Right" width={100} height={50} />
-          {showBubble && (
-            <>
-              <div className={styles.speechBubble}>Just keep swimming!! You&apos;ve got it</div>
-              <div className={styles.smallBubbleOneLeft}></div>
-              <div className={styles.smallBubbleTwoLeft}></div>
-            </>
-          )}
-        </div>
-      )}
-      {!isFirstFishVisible && (
-        <div className={styles.fishContainerLeft} onClick={handleFishClick}>
-          <Image src="/home-images/flipped-fish.png" alt="Swimming Fish Left" width={100} height={50} />
-          {showBubble && (
-            <>
-              <div className={styles.speechBubble}>Just keep swimming!! You&apos;ve got it</div>
-              <div className={styles.smallBubbleOneRight}></div>
-              <div className={styles.smallBubbleTwoRight}></div>
-            </>
-          )}
-        </div>
-      )}
+    <div className={styles.aquarium}>
+      <div
+        className={`${styles.fishContainer} ${
+          isSwimmingRight ? styles.swimRight : styles.swimLeft
+        }`}
+        onClick={handleFishClick}
+      >
+        <Image
+          src={
+            isSwimmingRight
+              ? "/home-images/fish.png"
+              : "/home-images/flipped-fish.png"
+          }
+          alt="Swimming Fish"
+          width={100}
+          height={50}
+          priority // Preload image to reduce flicker
+        />
+        {showBubble && (
+          <div className={styles.speechContainer}>
+            <div className={styles.speechBubble}>
+              Just keep swimming!! You&apos;ve got it
+            </div>
+            <div
+              className={
+                isSwimmingRight
+                  ? styles.smallBubbleOneLeft
+                  : styles.smallBubbleOneRight
+              }
+            ></div>
+            <div
+              className={
+                isSwimmingRight
+                  ? styles.smallBubbleTwoLeft
+                  : styles.smallBubbleTwoRight
+              }
+            ></div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
