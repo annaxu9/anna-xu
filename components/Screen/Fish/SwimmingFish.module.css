@@ -2,9 +2,9 @@
 .aquarium {
   position: relative;
   width: 100vw;
-  height: 18vh;
+  height: 160px;
   overflow: hidden; /* Ensures fish stays inside */
-  top: -60px;
+  top: -30px;
 }
 
 /* Common fish container styling */
