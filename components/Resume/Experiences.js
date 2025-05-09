@@ -3,6 +3,29 @@ import Experience from "./Experience";
 export default function Experiences() {
   const experiences = [
     {
+      image: "/resume-images/somerville.jpeg",
+      title: "Math Teacher - Somerville Center for Adult Learning Experience",
+      date: "April 2024–Present",
+      location: "Somerville, MA",
+      mainText: [
+        "Teaching mathematics to adult learners preparing for the ParaPro exam at the ",
+        "[Somerville Center for Adult Learning Experience]",
+        ".",
+      ],
+      supplementaryText: [
+        "Design and deliver engaging, learner-centered math lessons for a diverse class of 20–25 adult students preparing for the ParaPro exam.",
+        "Integrate explicit math strategies and digital tools (e.g., Aztec software) to support adult learners, including English language learners and students with varying educational backgrounds.",
+        "Collaborate weekly with the Reading/Writing Teacher to co-develop curriculum, monitor student progress, and ensure alignment with DESE standards.",
+        "Track attendance, document learning outcomes, and contribute to program assessment and improvement.",
+      ],
+      links: [
+        {
+          text: "Somerville Center for Adult Learning Experience",
+          href: "https://somerville.k12.ma.us/adult-learning/somerville-center-adult-learning-experiences-scale",
+        },
+      ],
+    },
+    {
       image: "/resume-images/jianna-logo.png",
       title: "Co-founder & Chief Information Officer (CIO) – Jianna Consulting",
       date: "January 2024–Present",
