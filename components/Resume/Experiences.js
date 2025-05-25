@@ -26,6 +26,32 @@ export default function Experiences() {
       ],
     },
     {
+      image: "/resume-images/yale.png",
+      title: "Frontend Developer - Yale Computer Science Department",
+      date: "March 2025–Present",
+      location: "New Haven, CT",
+      mainText: [
+        "Working with ",
+        "[Professor Abhishek Bhattacharjee]",
+        " on frontend development for brain-computer interface systems, contributing to the lab's HALO and SCALO projects which aim to transform neurological disorder treatment through computing innovations.",
+      ],
+      supplementaryText: [
+        "Developing frontend interfaces for brain-computer interface systems that process and visualize neural data.",
+        "Collaborating with researchers to implement user-friendly interfaces for next-generation neurotechnologies.",
+        "Contributing to a research group that has received recognition including the ACM SIGARCH Maurice Wilkes Award and multiple Top Picks selections.",
+      ],
+      links: [
+        {
+          text: "Professor Abhishek Bhattacharjee",
+          href: "https://www.cs.yale.edu/homes/abhishek/",
+        },
+        {
+          text: "Research Group",
+          href: "https://www.cs.yale.edu/homes/abhishek/group.html",
+        },
+      ],
+    },
+    {
       image: "/resume-images/jianna-logo.png",
       title: "Co-founder & Chief Information Officer (CIO) – Jianna Consulting",
       date: "January 2024–Present",

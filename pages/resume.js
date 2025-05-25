@@ -38,7 +38,7 @@ export default function Resume() {
           isScrolled ? "text-white" : "text-melrose"
         }`}
       >
-        Oh hi<span className="nervada">!</span> we
+        hi<span className="nervada">!</span> we
         <span className="nervada">l</span>come<span className="nervada">!</span>
         <span className="not-italic text-3xl"> 👩🏻‍💻 📖 🧠 💻</span>
       </h1>
