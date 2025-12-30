@@ -45,6 +45,7 @@ const gridImages = [
   "/home-images/chappell-roan.png",
   "/home-images/cmu.png",
   "/home-images/hcii.png",
+  
 ];
 
 // Function to get a shuffled array of unique images

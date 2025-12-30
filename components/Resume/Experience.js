@@ -95,12 +95,14 @@ function Experience({
         </div>
 
         {/* Read More Button */}
-        <button
-          className="w-full text-center font-semibold text-melrose100 hover:text-melrose transition-all"
-          onClick={toggleShowMore}
-        >
-          {showMore ? "Read Less" : "Read More"}
-        </button>
+        {supplementaryText[0] && (
+          <button
+            className="w-full text-center font-semibold text-melrose100 hover:text-melrose transition-all"
+            onClick={toggleShowMore}
+          >
+            {showMore ? "Read Less" : "Read More"}
+          </button>
+        )}
       </div>
     </div>
   );

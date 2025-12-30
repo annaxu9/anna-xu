@@ -4,8 +4,19 @@ export default function Experiences() {
   const experiences = [
     {
       image: "/resume-images/somerville.jpeg",
+      title: "Digital Literacy and Computer Science Teacher",
+      date: "October 2025–Present",
+      location: "Somerville, MA",
+      mainText: [
+        "Teaching Digital Literacy and Computer Science to 3rd, 5th, 6th, 7th, and 8th grade students at East Somerville Community School and Albert F. Argenziano School (serving 700+ learners).",
+      ],
+      supplementaryText: [],
+      links: [],
+    },
+    {
+      image: "/resume-images/somerville.jpeg",
       title: "Math Teacher - Somerville Center for Adult Learning Experience",
-      date: "April 2024–Present",
+      date: "April 2025–June 2025",
       location: "Somerville, MA",
       mainText: [
         "Teaching mathematics to adult learners preparing for the ParaPro exam at the ",
@@ -28,7 +39,7 @@ export default function Experiences() {
     {
       image: "/resume-images/yale.png",
       title: "Frontend Developer - Yale Computer Science Department",
-      date: "March 2025–Present",
+      date: "March 2025–August 2025",
       location: "New Haven, CT",
       mainText: [
         "Working with ",

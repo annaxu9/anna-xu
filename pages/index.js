@@ -13,7 +13,9 @@ export default function Home() {
       </Head>
       <div className="emoji-cursor-container sine-wave-background w-full h-full">
         <div>
-          <h1 className="text-center mb-10 wobble-text">Full Stack Engineer</h1>
+          <h1 className="text-center mb-10 wobble-text">
+            Classroom Teacher &<br></br> Full Stack Engineer
+          </h1>
           <div className="flex justify-center items-center w-4/5 mx-auto">
             <div className="pb-12 flex justify-around items-center flex-col md:flex-row ">
               <div className="hidden xs:block">
@@ -39,7 +41,7 @@ export default function Home() {
           <h1 className="mb-4 text-center"></h1>
           <p className="">
             <span className="css-rainbow-text grow-on-hover">Creative</span>,
-            collaborative, and goal-oriented student interested in the
+            collaborative, and goal-oriented teacher interested in the
             intersection of{" "}
             <span className="font-bold grow-on-hover ">
               Education and Technology

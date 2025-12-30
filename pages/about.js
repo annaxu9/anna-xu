@@ -30,23 +30,22 @@ export default function AboutMe() {
 
       {/* About Me Section */}
       <p className="text-lg text-gray-700 text-center max-w-lg">
-        I’m passionate about technology, design, and the intricate systems that
-        shape our world. As a Computer Science student at Yale University, I’ve
-        explored everything from web development and UI/UX to software
-        engineering and computer systems. I thrive at the intersection of
-        creativity and engineering, where human-centered design meets innovative
-        problem-solving.
+        I’m creative, curious, and a hobbyist at heart, with a lot of interests
+        and a love for learning. I enjoy technology and design, and I like
+        building things that make complicated systems feel simpler and more
+        human.
         <br />
         <br />
-        Beyond coding, I have a strong foundation in art and design, having
-        taken multiple studio art courses and worked on projects involving
-        painting, printmaking, and set design. My artistic background enhances
-        my ability to craft intuitive and visually compelling digital
-        experiences.
+        I studied Computer Science at Yale and also have a background in art,
+        which shapes how I think about visuals and creativity. I love working
+        with people, value my friends and family deeply, and try to bring care
+        into most things I do. Ultimately, I hope my work helps people live
+        happier and more aware of the world around them.
         <br />
         <br />
-        When I’m not building, designing, or learning, you’ll most likely find
-        me outdoors and/or reading a book.{" "}
+        When I’m not building or learning, you’ll usually find me outdoors,
+        crafting, or consuming media.
+
       </p>
 
       {/* Contact Section */}
