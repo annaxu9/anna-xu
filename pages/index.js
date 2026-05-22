@@ -44,14 +44,10 @@ export default function Home() {
             collaborative, and goal-oriented teacher interested in the
             intersection of{" "}
             <span className="font-bold grow-on-hover ">
-              Education and Technology
+              Education and Technology{" "}
             </span>
-            , specifically leveraging Artificial Intelligence and Game
-            development to create products that are user friendly, engaging, and{" "}
-            <span className="font-bold grow-on-hover ">
-              enhance human knowledge
-            </span>
-            .
+            to create engaging learning experiences that help students
+            communicate, collaborate, and solve problems with confidence.
           </p>
         </div>
       </div>

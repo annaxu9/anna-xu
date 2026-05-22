@@ -1,45 +1,43 @@
-import { useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 
-
-export default function WorldMap() {
-    const [selectedCountry, setSelectedCountry] = useState("");
-
-    const handleCountryClick = (countryName) => {
-        setSelectedCountry(countryName);
-    };
+export default function WorldMap({
+  geographyUrl,
+  selectedCountry,
+  onSelectCountry,
+}) {
   return (
-    <div>
-
-    <h1>{selectedCountry}</h1>
-    <ComposableMap>
-      <Geographies geography="/geography/states.json">
+    <ComposableMap style={{ width: "100%", height: "100%" }}>
+      <Geographies geography={geographyUrl}>
         {({ geographies }) =>
-          geographies.map((geo) => (
-            <Geography key={geo.rsmKey} geography={geo} 
-            onClick={() => {
-                handleCountryClick(geo.properties.name)
-                console.log(geo.properties.name)
-                }
-            }
-            style={{
-              default: {
-                fill: "#D6D6DA",
-                outline: "none",
-              },
-              hover: {
-                fill: "#F53",
-                outline: "none",
-              },
-              pressed: {
-                fill: "#E42",
-                outline: "none",
-              },
-            }}/>
-          ))
+          geographies.map((geo) => {
+            const name = geo.properties?.name; // depends on your geo file
+            const isSelected = name && name === selectedCountry;
+
+            return (
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                onClick={() => name && onSelectCountry(name)}
+                style={{
+                  default: {
+                    fill: isSelected ? "#111827" : "#D6D6DA",
+                    outline: "none",
+                  },
+                  hover: {
+                    fill: isSelected ? "#111827" : "#F59E0B",
+                    outline: "none",
+                    cursor: "pointer",
+                  },
+                  pressed: {
+                    fill: "#111827",
+                    outline: "none",
+                  },
+                }}
+              />
+            );
+          })
         }
       </Geographies>
     </ComposableMap>
-    </div>
-  )
+  );
 }
